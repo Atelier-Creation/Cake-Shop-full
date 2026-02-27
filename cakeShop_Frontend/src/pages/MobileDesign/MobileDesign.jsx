@@ -15,6 +15,7 @@ import "aos/dist/aos.css";
 import Testimonials from "./Testimonials";
 import AboutUs from "../../components/AboutUs";
 import { getProducts } from "../../api/productApi";
+import BakerySlider from "../../components/BakerySlider";
 const menuItems = [
   {
     label: "Chicken",
@@ -204,10 +205,7 @@ const MobileDesign = () => {
       </div>
 
       <div data-aos="fade-right" data-aos-delay="100">
-        <MobileBestseller
-          title="We Produce The Best Selected Meats For You"
-          subtitle="Trending Now"
-          onViewAll={() => console.log("View all clicked")}
+        <BakerySlider
         />
       </div>
 
