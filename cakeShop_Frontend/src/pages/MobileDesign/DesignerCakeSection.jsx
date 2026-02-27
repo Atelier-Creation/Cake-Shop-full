@@ -61,7 +61,7 @@ const DesignerCakeSection = () => {
                     className="bg-[#EF4B5F] text-white px-8 py-3.5 rounded-full font-bold transition-transform hover:scale-105 w-max flex items-center justify-center gap-2 shadow-lg"
                 >
                     Shop Now
-                    {/* Using simple SVG for play / arrow icon */}
+                    {/* svg / arrow icon */}
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
                     </svg>
