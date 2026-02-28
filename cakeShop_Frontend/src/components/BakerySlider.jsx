@@ -116,7 +116,7 @@ const BakerySlider = () => {
                                             </div>
 
                                             <span className="relative z-10 text-gray-700 text-sm font-medium group-hover:text-white transition-colors duration-300">
-                                                $ {item.price} USD
+                                                ₹ {item.price} USD
                                             </span>
 
                                         </button>

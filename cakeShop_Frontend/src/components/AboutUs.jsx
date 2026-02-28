@@ -8,50 +8,50 @@ export default function AboutUs() {
     bottomSmall:
       "https://images.unsplash.com/photo-1633961562073-df87b5c9cfe8?q=80&w=698&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   };
-  const videoId = "bTm9satDbww";
+  const videoId = "3AAdKl1UYZs";
   return (
     <section className="w-full bg-white py-2 md:py-12">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left content */}
           <div className="relative text-left about-bg px-6 py-2 md:py-12  rounded-lg overflow-hidden z-10">
             {/* Background image */}
             <img
-              src="/butcher.jpg"
+              src="https://img.freepik.com/free-vector/vector-flat-illustration-with-girl-who-cooks-kitchen_1150-34973.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80"
               alt="background"
               className="absolute top-10 right-[30%] bottom-45 w-[50%] h-[50%] object-cover opacity-15 -z-10"
             />
 
             <p className="text-lg text-red-600 font-semibold mb-1">
-              Our Meat Market
+              Our Cake Studio
             </p>
             <h2 className="text-3xl md:text-3xl font-extrabold leading-tight mb-4 text-gray-700">
-              WE GO ALL OUT TO RAISE MEAT THAT'S PURE AND SIMPLE
+              WE BAKE WITH LOVE, CREATIVITY & THE FINEST INGREDIENTS
             </h2>
             <p className="text-gray-600 mb-6 max-w-xl">
-              We source high-quality meat with strict standards and humane
-              practices. Freshness and taste come first — so you get a premium
-              product every time.
+  Every cake we create is handcrafted with premium ingredients and a
+  passion for perfection. From classic flavors to custom designer cakes,
+  we make every celebration sweeter and more memorable.
             </p>
 
             {/* Red stats box */}
-            <div className="mt-6 inline-block bg-red-700 text-white rounded shadow-lg ">
-              <div className="flex flex-wrap lg:flex-nowrap text-center divide-x divide-red-700 max-w-[100vw] items-center sm:justify-center sm:p-2">
+            <div className="mt-6 inline-block bg-[#E7B5E3] text-black rounded shadow-lg ">
+              <div className="flex flex-wrap lg:flex-nowrap text-center divide-x divide-[#E7B5E3] max-w-[100vw] items-center sm:justify-center sm:p-2">
                 <div className="px-6 py-6 w-[50%] lg:w-auto">
                   <div className="text-2xl font-bold mb-2">1,280+</div>
-                  <div className="text-sm opacity-90">Customers</div>
+                  <div className="text-sm opacity-90">Happy Customers</div>
                 </div>
                 <div className="px-6 py-6 w-[50%] lg:w-auto">
                   <div className="text-2xl font-bold mb-2">100%</div>
-                  <div className="text-sm opacity-90">Proven Quality</div>
+                  <div className="text-sm opacity-90">Freshly Baked</div>
                 </div>
                 <div className="px-6 py-6 w-[50%] lg:w-auto">
                   <div className="text-2xl font-bold mb-2">4+</div>
-                  <div className="text-sm opacity-90">Meats Types</div>
+                  <div className="text-sm opacity-90">Cake Flavours</div>
                 </div>
                 <div className="px-6 py-6 w-[50%] lg:w-auto">
                   <div className="text-2xl font-bold mb-2">5+</div>
-                  <div className="text-sm opacity-90">Coustomised Cuts</div>
+                  <div className="text-sm opacity-90">Custom Designs</div>
                 </div>
               </div>
             </div>

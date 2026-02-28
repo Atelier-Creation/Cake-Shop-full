@@ -192,11 +192,11 @@ const Navbar = () => {
         <div className="lg:flex items-center gap-4 ms-60 hidden ">
           <div className="flex items-center gap-1">
             <FaPhoneAlt size={16} />
-            <span className="text-gray-600">9487280241</span>
+            <span className="text-gray-600">9876543210</span>
           </div>
           <div className="flex items-center gap-1">
             <IoMail size={16} />
-            <span className="text-gray-600">iraichikadai@gmail.com</span>
+            <span className="text-gray-600">cakeshop@gmail.com</span>
           </div>
         </div>
         <div className="flex-1 flex justify-end mr-1">
@@ -205,13 +205,13 @@ const Navbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <div className="bg-red-600 text-white px-6 flex items-center justify-between relative">
+      <div className="bg-[#E7B5E3] text-white px-6 flex items-center justify-between relative">
         {/* Desktop Logo (unchanged) */}
         <div
           className="absolute -top-2.0 left-10 z-50 hidden md:block cursor-pointer"
           onClick={() => navigate("/")}
         >
-          <img src="/iraichi-logo1.svg" alt="Logo" className="h-39 w-auto" />
+          <img src="/cake-logo.svg" alt="Logo" className="h-39 w-auto" />
         </div>
 
         {/* --- MOBILE: left (menu), centered logo, right (cart + account) --- */}
@@ -221,7 +221,7 @@ const Navbar = () => {
           <button
             onClick={() => setMobileOpen(true)}
             aria-label="Open menu"
-            className="p-2 bg-[#BC141B91] border border-[#FFFFFF30] rounded-full"
+            className="p-2 bg-[#9E4C9C] border border-[#FFFFFF30] rounded-full"
           >
             <FiMenu size={20} />
           </button>
@@ -236,7 +236,7 @@ const Navbar = () => {
           >
             {/* make logo bigger on mobile; header height remains same (h-14) */}
             <img
-              src="/iraichi-logo1.svg"
+              src="/cake-logo.svg"
               alt="Logo"
               className="h-28 w-auto object-contain -mt-3"
             />
@@ -251,7 +251,7 @@ const Navbar = () => {
               toggleDrawer(true);
             }}
             aria-label="Open cart"
-            className="relative p-2 bg-[#BC141B91] border border-[#FFFFFF30] rounded-full"
+            className="relative p-2 bg-[#9E4C9C] border border-[#FFFFFF30] rounded-full"
           >
             <MdOutlineShoppingBag size={18} />
             {cartCount > 0 && (
@@ -277,7 +277,7 @@ const Navbar = () => {
                 navigate("/login");
               }
             }}
-            className="p-2 bg-[#BC141B91] border border-[#FFFFFF30] rounded-full"
+            className="p-2 bg-[#9E4C9C] border border-[#FFFFFF30] rounded-full"
             aria-label="Account"
           >
             {/* show initial if logged in, else default icon */}
@@ -328,14 +328,14 @@ const Navbar = () => {
 
           {/* Icons */}
           <div className="flex items-center gap-1">
-            <div className="p-2 bg-[#BC141B91] border border-[#FFFFFF30] rounded-full">
+            <div className="p-2 bg-[#9E4C9C] border border-[#FFFFFF30] rounded-full">
               <Search className="cursor-pointer " size={18} />
             </div>
 
             {/* Shopping Bag with Cart Count */}
             <div
               onClick={() => toggleDrawer(true)}
-              className="relative p-2 bg-[#BC141B91] border border-[#FFFFFF30] rounded-full cursor-pointer"
+              className="relative p-2 bg-[#9E4C9C] border border-[#FFFFFF30] rounded-full cursor-pointer"
             >
               <MdOutlineShoppingBag className="cursor-pointer " size={18} />
               {cartCount > 0 && (
@@ -361,7 +361,7 @@ const Navbar = () => {
                   navigate("/login");
                 }
               }}
-              className="p-2 bg-[#BC141B91] border border-[#FFFFFF30] rounded-full cursor-pointer"
+              className="p-2 bg-[#9E4C9C] border border-[#FFFFFF30] rounded-full cursor-pointer"
             >
               {/* show initial if logged in, else default icon */}
               {userInitial ? (

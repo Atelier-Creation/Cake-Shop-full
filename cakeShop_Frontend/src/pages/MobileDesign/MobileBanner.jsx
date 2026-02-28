@@ -49,7 +49,7 @@ const MobileBanner = () => {
   };
 
   return (
-    <div className="relative w-full h-[60vh] max-w-md mx-auto overflow-hidden lg:w-full lg:h-[80vh] lg:max-w-none">
+    <div className="relative w-full h-[40vh] max-w-md mx-auto overflow-hidden lg:w-full lg:h-[90vh] lg:max-w-none">
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -63,7 +63,7 @@ const MobileBanner = () => {
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="relative w-full h-[60vh] lg:h-[80vh] bg-center bg-cover bg-no-repeat sm:h-90 md:h-96"
+              className="relative w-full h-[40vh] lg:h-[90vh] bg-center bg-cover bg-no-repeat sm:h-90 md:h-96"
               style={{ backgroundImage: `url(${src.image})` }}
             >
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 lg:px-20 z-20">
