@@ -26,11 +26,11 @@ const DesignerCakeSection = () => {
                 <p className="text-[#EF4B5F] text-xs lg:text-sm font-bold tracking-[0.2em] uppercase mb-3">
                     Designer Cake
                 </p>
-                <h2 className="text-4xl lg:text-6xl font-black italic text-black mb-6" style={{ fontFamily: "'Dancing Script', cursive, serif" }}>
+                <h2 className="text-4xl lg:text-6xl font-black italic text-[#2a0e05] mb-6" style={{ fontFamily: "'Dancing Script', cursive, serif" }}>
                     Creamy Nuts Vanilla Cake
                 </h2>
 
-                <p className="text-gray-500 text-sm md:text-base leading-loose mb-10 max-w-xl">
+                <p className="text-[#5a5a5a] text-sm md:text-base leading-loose mb-10 max-w-xl">
                     Bibendum enim facilisis gravida neque convallis a cras semper.
                     Pretium fusce id velit ut tortor pretium viverra suspendisse. Ut
                     diam quam nulla porttitor. Viverra ipsum nunc aliquet bibendum

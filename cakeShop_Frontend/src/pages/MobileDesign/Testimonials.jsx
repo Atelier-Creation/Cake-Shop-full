@@ -1,121 +1,95 @@
+"use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
-import { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    text: "இறைச்சி கடையிலா வாங்குற Chicken செம்ம fresh! Country chicken taste vera level. Deliveryயும் delay இல்ல. Super service!",
-    name: " Ramesh, Singanallur",
+    id: 1,
+    quote:
+      "Whether it’s the warm bread, or just the cozy aroma that fills the air, this bakery always brighter",
+    image:
+      "https://cdn.prod.website-files.com/68c2913cdc349585e89642ac/68cbcbffbe9b0a3cd99a7a8e_testimonial-1.avif",
+    name: "Daniel Armstrong",
+    role: "Physician & athlet",
   },
   {
-    text: "Inga vanguna mutton quality semma! Na Singanallur side la iruken, time-ku delivery kudukraanga. Freshaavum cleanaavum iruku!",
-    name: "Karthik, Ramanathapuram ",
+    id: 2,
+    quote:
+      "The aroma hits you the moment you walk in. Every bite tastes like it was made just for me",
+    image:
+      "https://cdn.prod.website-files.com/68c2913cdc349585e89642ac/68cbcbff23a598f4014ed4fc_testimonial-2.avif",
+    name: "Evelyn Hall",
+    role: "Diet instructor",
   },
   {
-    text: "எப்போ order பண்ணினாலும், same quality தான். சுத்தமா pack பண்ணி, neatly deliver பண்ணுறாங்க. வீட்டுல எல்லாருக்கும் பிடிச்சிருக்கு.",
-    name: " Lakshmi, Selvapuram ",
-  },
-  {
-    text: "Bro seriously, kadaila kidaikaadha quality inga kidaikuthu. Chicken soft ah iruku, smell illa. Biryani taste level-up",
-    name: "Hari, Saibaba Colony",
-  },
-  {
-    text: "Iraichi Kadai is my go-to for all non-veg weekends! Fresh meat, perfect cuts, and good service. Totally worth it for Coimbatore people!",
-    name: "Suresh, Peelamedu",
-  },
-  {
-    text: "mutton ரொம்ப clean, நல்லா wash பண்ணி pack பண்ணுறாங்க. கொஞ்சம் கூட smell இல்ல. Family use-ku super place.",
-    name: "Revathi, Kuniyamuthur",
-  },
-  {
-    text: "Na hostel la iruken, weekends la biryani panrom. Iraichi Kadai la vangina chicken super soft and tasty da. Delivery fast ah iruku!",
-    name: "Arun, Gandhipuram",
-  },
-  {
-    text: "My mom used to go to market every Sunday, now we just order from Iraichi Kadai. Fresh, clean, and tasty every time! Coimbatore ku ippadi oru service romba useful.",
-    name: "Anand, Vadavalli",
+    id: 3,
+    quote:
+      "They’re open whenever my cravings hit, and the quality of food is always top notch",
+    image:
+      "https://cdn.prod.website-files.com/68c2913cdc349585e89642ac/68cbcbfff6f10040b5838a58_testimonial-3.avif",
+    name: "James Robinson",
+    role: "NYT bestselling author",
   },
 ];
 
-
-const Testimonials = () => {
-  useEffect(() => {
-    Aos.init({ duration: 800, once: true });
-  }, []);
-
+export default function Testimonials() {
   return (
-    <div className="w-full relative pt-4 md:pt-8 pb-4  bg-white testimonial">
-      
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-xl font-bold mb-4 md:mb-8 lg:mb-2 lg:text-4xl lg:font-bold">
-          Customer Reviews
+    <section className="py-10">
+      <div className="mx-auto lg:px-6 px-3">
+        
+        {/* Title */}
+        <h2 className="text-4xl md:text-5xl font-semibold text-center text-[#2b0d05] mb-6 md:mb-10">
+          What our fans say
         </h2>
-        <p className="text-gray-600 mb-8">
-          Hear it directly from our happy guests
-        </p>
 
+        {/* Slider */}
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={20}
+          spaceBetween={30}
           slidesPerView={1}
+          loop={true}
           autoplay={{
-            delay: 1500,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           breakpoints={{
-            768: { slidesPerView: 2,spaceBetween:16 },
-            1024: { slidesPerView: 4,spaceBetween:16 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
-          // style={{overflowY:"visible",marginTop:"2rem"}}
+          className="!items-stretch"
         >
-          {testimonials.map((t, idx) => (
-            <SwiperSlide key={idx} >
-              <div
-                className="relative bg-white min-h-[250px] h-[350px] rounded-2xl shadow-md md-2 md:px-8 py-5 flex flex-col justify-between text-center border border-gray-200"
-                data-aos="fade-up"
-                data-aos-delay={idx * 100}
-              >
-                <div className="absolute border-8 border-white bg-gray-100 rounded-full right-0 lg:-right-4 -top-5 p-2">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" className="w-8 h-8" alt="google" />
-                </div>
-                {/* Top Quotation Mark */}
-                <div className="absolute -top-4 left-4 text-yellow-500 text-8xl">
-                 <img src="quats.svg" alt="quats" className='w-7 h-7' />
-                </div>
-
-                {/* Review Text */}
-                <p className="text-gray-800 md:mt-5 mt-10 px-10 lg:px-0 text-base leading-relaxed">
-                  {t.text}
+          {testimonials.map((item) => (
+            <SwiperSlide key={item.id} className="!h-auto flex">
+              <div className="bg-[#e9dfd6] rounded-[40px] lg:p-8 p-4 h-full flex flex-col justify-between w-full h-full">
+                
+                {/* Quote */}
+                <p className="text-[#2b0d05] text-lg leading-relaxed lg:mb-8 md:mb-4 mb-2">
+                  “ {item.quote} ”
                 </p>
 
-                {/* Name */}
-                <p className="mt-6 text-lg font-semibold text-gray-900">
-                  ~ {t.name}
-                </p>
-
-                {/* Rating */}
-                <div className="flex justify-center mt-4 space-x-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={20} fill="#FBBF24" stroke="#FBBF24" />
-                  ))}
+                {/* Image */}
+                <div className="overflow-hidden rounded-2xl lg:mb-6 md:mb-3 mb-2">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full lg:h-[300px] h-[30vh] object-cover"
+                  />
                 </div>
 
-                {/* Bottom Quotation Mark */}
-                <div className="absolute -bottom-3 right-3 text-yellow-500 text-8xl">
-                  <img src="quats2.svg" alt="quats" className='w-7 h-7' />
+                {/* Author */}
+                <div className="flex lg:flex-row flex-col items-center lg:ms-auto lg:gap-3 text-center">
+                  <h4 className="text-lg font-semibold text-[#2b0d05]">
+                    {item.name}
+                  </h4>
+                  <p className="text-gray-600 text-base font-medium">{item.role}</p>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Testimonials;
+}

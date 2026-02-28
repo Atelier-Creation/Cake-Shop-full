@@ -1,187 +1,111 @@
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { Link } from "react-router-dom";
-import bgImage from "../../assets/images/Untitled/42621686_9008027 1-cropped.svg";
-import rectBg from "../../assets/images/Untitled/Rectangle 203.svg";
-import { useNavigate } from "react-router-dom";
-const FooterSection = ({ title, children }) => {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="mb-4 w-full">
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex justify-between items-center w-full text-white font-semibold text-base sm:text-lg mb-2"
-      >
-        {title}
-        {open ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-      </button>
-      {open && (
-        <div className="pl-2 text-white text-sm sm:text-base">{children}</div>
-      )}
-    </div>
-  );
-};
+import { ArrowRight, ChevronLeft } from "lucide-react";
+import React from "react";
 
 const MobileFooter = () => {
-  const navigate = useNavigate()
   return (
-    <footer className="relative pt-12 text-white z-10 mt-20 sm:mt-28 lg:mt-40 bg-[#222222] lg:bg-[#fff]">
-      {/* Background for top wave */}
-      <div className="absolute -top-10 lg:-top-30 left-0 w-full">
-        <img src={bgImage} alt="bg" className="w-full object-cover" />
-      </div>
+    <footer className="bg-[#f4ebe2] text-[#2a0e05] md:pt-16 pt-6 px-5">
+      <div className="max-w-7xl mx-auto">
 
-      {/* Mobile Section */}
-      <div className="md:my-8 my-1 lg:hidden flex flex-col items-center justify-center px-4 gap-4">
-        <Link to={"/"}>
-          <img
-            src="/ik-white.svg"
-            alt="Logo"
-            className="h-38 sm:h-38 object-contain"
-          />
-        </Link>
-        <p className="text-sm text-center leading-relaxed">
-          Having had very bitter experiences with the local meat shops and
-          seeing that my free range Country Chicken were sold alongside the
-          other poultry, I decided to bring them directly to customers. Thus the
-          brand “Iraichi Kadai” came into existence!
-        </p>
-      </div>
+        {/* Top Section */}
+        <div className="flex flex-col lg:flex-row justify-between gap-7">
 
-      <div className="my-8 lg:hidden px-4">
-        <FooterSection title="Quick Links">
-          <ul className="space-y-1">
-            <li>Home</li>
-            <li>Products</li>
-            <li>Search</li>
-            <li>Contact</li>
-          </ul>
-        </FooterSection>
+          {/* Subscribe Section */}
+          <div className="w-full">
+            <h2 className="text-3xl font-bold mb-2">
+              Sunshine in your inbox
+            </h2>
 
-        <FooterSection title="Policies">
-          <ul className="space-y-1">
-            <li onClick={() => navigate("/privacy-policy")}>Privacy Policy</li>
-            <li onClick={() => navigate("/terms-conditions")}>
-              Terms of Service
-            </li>
-            <li>Refund Policy</li>
-          </ul>
-        </FooterSection>
+            <p className="text-base text-[#280a03] mb-6 font-medium">
+              Get 25% off your starter kit when you sign up
+            </p>
 
-        <FooterSection title="Settings">
-          <ul className="space-y-1">
-            <li>Account</li>
-            <li>Language</li>
-            <li>Notifications</li>
-          </ul>
-        </FooterSection>
-
-        {/* Mobile-only logos under Settings */}
-        <div className="flex items-center justify-center gap-4 mt-4 lg:hidden">
-          <img src="/fssai-logo.png" alt="fssai" className="h-12" />
-          <img src="/gov-approved-msme.png" alt="msme" className="h-6" />
-        </div>
-      </div>
-
-      {/* Desktop Section */}
-      <div className="hidden relative lg:flex justify-around lg:mt-10 lg:pb-10 px-10">
-        <div className="absolute top-0 left-0 w-full">
-          <img src={rectBg} alt="rect-bg" className="w-full object-cover" />
-        </div>
-        <div className="w-80 z-10">
-          <div className="flex items-center justify-center gap-5 mb-4">
-            <Link to={"/"}>
-              <img
-                src="/ik-white.svg"
-                alt="Logo"
-                className="h-30 lg:h-43 object-contain"
+            <div className="flex items-center max-w-md gap-2">
+              <input
+                type="email"
+                placeholder="Enter your mail"
+                className="flex-1 px-6 md:py-3 py-2 border rounded-full border-[#d2bcb6] bg-transparent outline-none text-[#2a0e05]"
               />
-            </Link>
+              <button className="bg-yellow-400 rounded-full md:w-13 md:h-13 w-10 h-10 flex items-center justify-center text-xl">
+                <ArrowRight/>
+              </button>
+            </div>
+
+            <p className="font-medium text-base  text-[#565656] mt-4 max-w-md">
+              You can unsubscribe by using the unsubscribe link. Our Privacy
+              Policy applies and sets out your rights.
+            </p>
           </div>
-          <p className="text-sm text-start leading-relaxed">
-            Having had very bitter experiences with the local meat shops and
-            seeing that my free range Country Chicken were sold alongside the
-            other poultry, I decided to bring them directly to customers. Thus
-            the brand “Iraichi Kadai” came into existence!
-          </p>
+
+          {/* Contact Section */}
+          <div className="flex flex-col md:flex-row justify-between w-full">
+          <div>
+            <h3 className="text-xl font-semibold mb-6">Contact us</h3>
+
+            <p className="text-[#6b6b6b] mb-3 font-medium text-lg">info@example.com</p>
+
+            <p className="text-3xl font-bold mb-3">+0123-456-9870</p>
+
+            <p className="text-[#6b6b6b] mb-4 font-medium text-base">
+              27th Street, 15th Floor, New York, NY 1010
+            </p>
+
+            <a
+              href="#"
+              className="font-semibold text-lg underline underline-offset-4"
+            >
+              Get directions
+            </a>
+          </div>
+
+          {/* Links Section */}
+          <div className="grid grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-6">Useful link</h3>
+              <ul className="space-y-3 text-[#5a5a5a] font-medium text-base">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Blog</li>
+                <li>Search results</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-6">Our utilities</h3>
+              <ul className="space-y-3 text-[#5a5a5a] font-medium text-base">
+                <li>Style guide</li>
+                <li>Changelog</li>
+                <li>Licenses</li>
+                <li>Protected page</li>
+                <li>404</li>
+              </ul>
+            </div>
+          </div>
+          </div>
         </div>
 
-        {/* Links */}
-        <div className="lg:flex flex-col gap-2 z-10 mt-5">
-          <h4 className="text-xl font-semibold">Quick Links</h4>
-          <a href="/" className="hover:underline">
-            Search
-          </a>
-          <a href="/" className="hover:underline">
-            Products
-          </a>
-          <a href="/" className="hover:underline">
-            Contact Us
-          </a>
-          <a href="/" className="hover:underline">
-            Recipe
-          </a>
+        {/* Bottom Section */}
+        <div className="mt-10 pb-5 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
+
+          {/* Social + Copyright */}
+          <div>
+            <div className="md:flex grid grid-cols-2 items-center lg:gap-4 gap-2 text-[#2a0e05] mb-4 font-medium text-lg">
+              <span>Facebook - </span>
+              <span>Twitter - </span>
+              <span>Instagram - </span>
+              <span>Youtube </span>
+            </div>
+
+            <p className="text-[#5a5a5a] text-base">
+              © 2025 Bisqueria made by Themetechmount powered by Webflow
+            </p>
+          </div>
+
+          {/* Big Right Text */}
+          <div className="md:text-[130px] text-5xl mx-auto lg:mx-0 font-extrabold leading-none">
+            Bisqueria
+          </div>
         </div>
-
-        <div className="lg:flex flex-col gap-2 z-10 mt-5">
-          <h4 className="text-xl font-semibold">Policies</h4>
-          <a href="/privacy-policy" className="hover:underline">
-            Privacy Policy
-          </a>
-          <a href="/terms-conditions" className="hover:underline">
-            Terms of Service
-          </a>
-          <a href="/" className="hover:underline">
-            Shipping policy
-          </a>
-          <a href="/" className="hover:underline">
-            Return & Refund policy
-          </a>
-          {/* <a href="/privacy-policy" className="hover:underline">Privacy Policy</a>
-          <a href="/terms-conditions" className="hover:underline">Terms of Service</a>
-          <a href="/" className="hover:underline">Shipping policy</a>
-          <a href="/" className="hover:underline">Return & Refund policy</a> */}
-        </div>
-
-        <div className="lg:flex flex-col gap-2 z-10 mt-5">
-          <h4 className="text-xl font-semibold">Settings</h4>
-          <a href="/" className="hover:underline">
-            Home
-          </a>
-          <a href="/" className="hover:underline">
-            Meat-Product
-          </a>
-          <a href="/" className="hover:underline">
-            Recipe
-          </a>
-          <a href="/" className="hover:underline">
-            About us
-          </a>
-          <a href="/" className="hover:underline">
-            Contact us
-          </a>
-        </div>
-      </div>
-
-      {/* Desktop logos (unchanged, visible only on lg and up) */}
-      <div className="hidden lg:flex items-center justify-end gap-4 relative z-[100] mr-[100px] mt-[-100px]">
-        <img src="/fssai-logo.png" alt="fssai" className="h-20" />
-        <img src="/gov-approved-msme.png" alt="msme" className="h-10" />
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="relative z-10 text-center bg-[#222] py-2 text-gray-300 text-xs sm:text-sm lg:text-base">
-        © 2025, Iraichi Kadai &{" "}
-        <a
-          href="https://www.theateliercreation.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline"
-        >
-          Atelier
-        </a>{" "}
-        All Rights Reserved.
       </div>
     </footer>
   );

@@ -47,13 +47,13 @@ const MobileCategorySlider = () => {
           <p className="text-[#EF4B5F] text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-2 drop-shadow-sm">
             Cakes
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-black" style={{ fontFamily: "'Dancing Script', cursive, serif" }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#2a0e05]" style={{ fontFamily: "'Dancing Script', cursive, serif" }}>
             Our Favourites
           </h2>
         </div>
         <button
           onClick={() => navigate("/collections/all")}
-          className="text-sm md:text-base font-semibold text-gray-700 hover:text-black mb-1 md:mb-2 transition-colors cursor-pointer"
+          className="text-sm md:text-base font-semibold text-[#5a5a5a] hover:text-black mb-1 md:mb-2 transition-colors cursor-pointer"
         >
           Explore More
         </button>
@@ -93,10 +93,10 @@ const MobileCategorySlider = () => {
                 />
               </div>
 
-              <h3 className="text-center text-gray-800 text-lg md:text-xl font-medium px-2 italic font-serif group-hover:text-[#EF4B5F] transition-colors leading-tight">
+              <h3 className="text-center text-[#2a0e05] text-lg md:text-xl font-medium px-2 italic font-serif group-hover:text-[#2a0e05] transition-colors leading-tight">
                 {item.title.en}
               </h3>
-              <p className="text-gray-500 text-xs md:text-sm mt-2 font-medium">{item.title.ta}</p>
+              <p className="text-[#5a5a5a] text-xs md:text-sm mt-2 font-medium">{item.title.ta}</p>
             </div>
           </SwiperSlide>
         ))}

@@ -8,7 +8,7 @@ export default function AboutUs() {
     bottomSmall:
       "https://images.unsplash.com/photo-1633961562073-df87b5c9cfe8?q=80&w=698&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   };
-  const videoId = "3AAdKl1UYZs";
+  const videoId = "HTXB6flODww";
   return (
     <section className="w-full bg-white py-2 md:py-12">
       <div className="mx-auto px-4">
@@ -22,13 +22,13 @@ export default function AboutUs() {
               className="absolute top-10 right-[30%] bottom-45 w-[50%] h-[50%] object-cover opacity-15 -z-10"
             />
 
-            <p className="text-lg text-red-600 font-semibold mb-1">
+            <p className="text-lg text-[#EF4B5F] font-semibold mb-1">
               Our Cake Studio
             </p>
-            <h2 className="text-3xl md:text-3xl font-extrabold leading-tight mb-4 text-gray-700">
+            <h2 className="text-3xl md:text-3xl font-extrabold leading-tight mb-4 text-[#2a0e05]">
               WE BAKE WITH LOVE, CREATIVITY & THE FINEST INGREDIENTS
             </h2>
-            <p className="text-gray-600 mb-6 max-w-xl">
+            <p className="text-[#5a5a5a] mb-6 max-w-xl">
   Every cake we create is handcrafted with premium ingredients and a
   passion for perfection. From classic flavors to custom designer cakes,
   we make every celebration sweeter and more memorable.
