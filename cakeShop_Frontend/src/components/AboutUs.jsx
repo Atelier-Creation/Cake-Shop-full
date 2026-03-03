@@ -26,7 +26,7 @@ export default function AboutUs() {
 
 
             {/* RIGHT SIDE – YOUR ORIGINAL CONTENT */}
-            <div className="bg-[#efe6d8] rounded-2xl h-full lg:h-[70vh] shadow-lg overflow-hidden md:*:w-[75%]">
+            <div className="bg-[#efe6d8] rounded-2xl h-full lg:h-[70vh] shadow-lg overflow-hidden lg:w-[75%]">
 
               <div className="p-6 md:p-8 flex flex-col justify-between h-full">
                 <div>
