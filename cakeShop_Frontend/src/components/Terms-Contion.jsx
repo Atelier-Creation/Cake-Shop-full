@@ -2,10 +2,11 @@ import React from "react";
 import MobileNavbar from "../pages/MobileDesign/MobileNavbar";
 import MobileFooter from "../pages/MobileDesign/MobileFooter";
 import Navbar from "../pages/MobileDesign/Navbar";
+import CakeNavbar from "../pages/MobileDesign/CakeNavbar";
 function TermsContion() {
   return (
     <>
-      <Navbar/>
+      <CakeNavbar/>
       <div className="lg:py-10 lg:px-20 p-5 lg:mt-0 mt-10">
         <h1 className="lg:text-5xl text-4xl text-center mb-1 ">Terms and Conditions</h1>
         <p className="text-center mb-10">

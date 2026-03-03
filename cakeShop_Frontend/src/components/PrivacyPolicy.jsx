@@ -4,11 +4,12 @@ import NewNavbar from '../pages/MobileDesign/NewNavbar'
 import MobileFooter from '../pages/MobileDesign/MobileFooter'
 import MobileNavbar from '../pages/MobileDesign/MobileNavbar'
 import Navbar from '../pages/MobileDesign/Navbar'
+import CakeNavbar from '../pages/MobileDesign/CakeNavbar'
 
 function PrivacyPolicy() {
   return (
     <>
-    <Navbar/>
+    <CakeNavbar/>
     <div className='lg:py-10 lg:px-20 p-5 lg:mt-0 mt-10'>
       <h1 className='lg:text-5xl text-4xl text-center mb-1 '>Privacy Policy</h1>
       <p className='text-center mb-10'>Last updated on September 26th, 2025</p>

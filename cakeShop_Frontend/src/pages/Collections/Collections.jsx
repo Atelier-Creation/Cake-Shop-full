@@ -5,6 +5,7 @@ import MobileFooter from "../MobileDesign/MobileFooter";
 import Collectiongrid from "./Collectiongrid";
 import NewNavbar from "../MobileDesign/NewNavbar";
 import Navbar from "../MobileDesign/Navbar";
+import CakeNavbar from "../MobileDesign/CakeNavbar";
 
 const menuItems = [
   {
@@ -32,7 +33,7 @@ const Collections = () => {
   
   return (
     <>
-       <Navbar/>
+       <CakeNavbar/>
       
       {/* <IconMenu items={menuItems} /> */}
       <Collectiongrid />

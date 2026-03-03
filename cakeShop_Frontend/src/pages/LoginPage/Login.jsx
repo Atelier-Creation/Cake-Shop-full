@@ -6,6 +6,7 @@ import { loginUser } from "../../api/authApi";
 import { addToCartAPI } from "../../api/cartApi";
 import { getProducts } from "../../api/productApi";
 import { Eye, EyeClosed } from "lucide-react";
+import CakeNavbar from "../MobileDesign/CakeNavbar";
 
 function Login() {
   const navigate = useNavigate();
@@ -217,7 +218,7 @@ function Login() {
 
   return (
     <div>
-      <Navbar />
+      <CakeNavbar />
 
       <div className="flex flex-col lg:flex-col items-center justify-center gap-3 my-10 lg:w-120 md:w-110 w-full lg:mx-auto md:mx-auto px-5">
         <h1 className="text-3xl font-bold mb-4">Login</h1>

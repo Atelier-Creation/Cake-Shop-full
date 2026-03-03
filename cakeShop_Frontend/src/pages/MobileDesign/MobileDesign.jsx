@@ -16,6 +16,7 @@ import Testimonials from "./Testimonials";
 import AboutUs from "../../components/AboutUs";
 import { getProducts } from "../../api/productApi";
 import BakerySlider from "../../components/BakerySlider";
+import CakeNavbar from "./CakeNavbar";
 const menuItems = [
   {
     label: "Chicken",
@@ -183,7 +184,7 @@ const MobileDesign = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      {isMobile ? <MobileNavbar /> : <Navbar />}
+      {isMobile ? <CakeNavbar /> : <CakeNavbar />}
       {isMobile ? <IconMenu items={menuItems} /> : ""}
 
       <div data-aos="fade-up" data-aos-delay="100">

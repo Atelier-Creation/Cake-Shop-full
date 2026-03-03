@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../MobileDesign/Navbar";
 import { forgotPassword, resetPassword } from "../../api/authApi"; // import both APIs
 import { useModal } from "../../context/GlobalModal"; // assuming you have modal context
+import CakeNavbar from "../MobileDesign/CakeNavbar";
 
 const menuItems = [
   { label: "Chicken", link: "/collections/chicken", icon: "//lenaturelmeat.com/cdn/shop/files/turkey-chicken-svgrepo-com_32x32.svg?v=1752237020" },
@@ -77,7 +78,7 @@ function ResetPassword() {
 
   return (
     <div>
-      <Navbar />
+      <CakeNavbar />
 
       <div className="flex flex-col items-center justify-center gap-3 my-10 lg:w-120 md:w-110 w-full lg:mx-auto md:mx-auto px-5">
         <h1 className="text-3xl font-bold mb-2">Reset your password</h1>
