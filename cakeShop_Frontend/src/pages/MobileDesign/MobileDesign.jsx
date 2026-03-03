@@ -234,7 +234,7 @@ const MobileDesign = () => {
   </div> */}
 
       <div data-aos="zoom-in" data-aos-delay="100">
-        <FeatureSlider features={featuresData} />
+        <FeatureSlider/>
       </div>
 
       <div data-aos="fade-up" data-aos-delay="100">

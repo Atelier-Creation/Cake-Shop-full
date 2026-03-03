@@ -1,59 +1,98 @@
-// src/components/FeatureSlider.jsx
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { H3 } from "../../components/TextComponents";
 
-const FeatureSlider = ({ features }) => {
+const FeatureSlider = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
       once: true,
       easing: "ease-in-out",
     });
-    AOS.refresh();
   }, []);
 
+  const cakeFeatures = [
+    {
+      title: "FSSAI Certified",
+      desc: "Our bakery follows strict food safety standards and is officially certified for quality and hygiene compliance.",
+      img: "https://cdn-icons-png.freepik.com/256/16351/16351039.png?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_white_label",
+    },
+    {
+      title: "Freshly Baked Daily",
+      desc: "Every cake is baked fresh each day using carefully selected ingredients to ensure softness and rich flavor.",
+      img: "https://cdn-icons-png.freepik.com/256/8282/8282191.png?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_white_label",
+    },
+    {
+      title: "Premium Ingredients",
+      desc: "We use high-quality butter, real cocoa, fresh cream, and natural flavors for an authentic taste experience.",
+      img: "https://cdn-icons-png.freepik.com/256/2728/2728491.png?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_white_label",
+    },
+    {
+      title: "No Artificial Preservatives",
+      desc: "Our cakes are free from harmful preservatives, ensuring natural freshness and safe consumption.",
+      img: "https://cdn-icons-png.freepik.com/256/12792/12792071.png?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_white_label",
+    },
+    {
+      title: "100% Hygienic Preparation",
+      desc: "Prepared in a sanitized kitchen environment with trained staff maintaining strict cleanliness standards.",
+      img: "https://cdn-icons-png.flaticon.com/512/2913/2913465.png",
+    },
+    {
+      title: "Customized With Love",
+      desc: "Each cake is handcrafted with care and can be personalized for birthdays, weddings, and special occasions.",
+      img: "https://cdn-icons-png.freepik.com/256/17964/17964435.png?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_white_label",
+    },
+  ];
+
   return (
-    <div className="w-full px-4 py2 md:py-8" data-aos="zoom-in" data-aos-delay="100">
+    <div className="w-full px-4 py-12 bg-white">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={20}
+        spaceBetween={30}
         slidesPerView={4}
         loop={true}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
-          320: { slidesPerView: 1, spaceBetween: 16 },
-          640: { slidesPerView: 2, spaceBetween: 16 },
-          768: { slidesPerView: 3, spaceBetween: 20 },
-          1024: { slidesPerView: 4, spaceBetween: 20 },
+          320: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
         }}
-        className="pb-12"
       >
-        {features?.map((item, idx) => (
+        {cakeFeatures.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="flex flex-col items-center text-center rounded-xl py-3 transition"
+              className="flex flex-col items-center text-center p-4"
               data-aos="fade-up"
-              data-aos-delay={100 + idx * 100} // stagger animation
+              data-aos-delay={idx * 100}
             >
-              <img
-                src={item.img}
-                alt={item.title.en}
-                className="w-28 h-28 object-contain mb-1 md:mb-4"
-              />
-              <h3 className="text-lg font-semibold text-[#2a0e05]" >{item.title.en}</h3>
-              <p className="text-xs text-gray-500 max-w-50 mt-1 text-center">({item.title.ta})</p>
-              {/* <H3
-                className="text-lg font-semibold text-gray-800"
-                en={item.title.en}
-                ta=
-              /> */}
+              {/* Icon - Styled to look like the gold thin-line art */}
+              <div className="mb-6">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-20 h-20 object-contain 
+               invert-[71%] 
+               sepia-[88%] 
+               saturate-[192%] 
+               hue-rotate-[358deg] 
+               brightness-[80%] 
+               contrast-[89%]"
+                />
+              </div>
+
+              {/* Title - All Caps, Spaced */}
+              <h3 className="text-sm md:text-base font-bold tracking-[0.15em] text-gray-900 uppercase mb-3">
+                {item.title}
+              </h3>
+
+              {/* Description - Italicized, Serif-style font */}
+              <p className="text-sm md:text-base italic text-gray-600 ">
+                {item.desc}
+              </p>
             </div>
           </SwiperSlide>
         ))}
