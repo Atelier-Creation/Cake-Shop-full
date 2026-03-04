@@ -71,14 +71,14 @@ export default function DashboardPage() {
             value={stats.totalOrders ?? "0"}
             diff={null}
             icon={<ReceiptText />}
-            color="bg-[#C7F2FF] w-full sm:w-2/5"
+            color="bg-[#ffcc0f] w-full sm:w-2/5"
           />
           <StatCard
             label="Sales"
             value={`₹ ${stats.totalRevenue ?? 0}`}
             diff={null}
             icon={<PiggyBank />}
-            color="bg-[#FFE5EE] w-full sm:w-3/5"
+            color="bg-[#f4ebe2] w-full sm:w-3/5"
           />
         </div>
 

@@ -218,7 +218,7 @@ export default function ProductList() {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => navigate("/addproducts")}
-            className="flex items-center gap-2 border px-4 py-2 rounded-md text-sm text-white bg-green-700 hover:bg-green-600"
+            className="flex items-center gap-2 px-4 py-2 rounded-md text-sm text-[#280a03] bg-[#ffcc0f] hover:bg-[#ffcc0f]"
           >
             <BoxIcon size={16} /> Add Product
           </button>
@@ -249,7 +249,7 @@ export default function ProductList() {
 
       {/* Filters */}
       {(showMobileFilters || window.innerWidth >= 640) && (
-        <div className="sticky top-[26px] sm:top-[-12px] z-10 bg-white py-3 flex flex-wrap gap-3 border-y mb-4 sm:flex">
+        <div className="sticky top-[26px] sm:top-[-12px] z-10 bg-white px-3 py-3 flex flex-wrap gap-3 rounded-lg mb-4 sm:flex">
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}

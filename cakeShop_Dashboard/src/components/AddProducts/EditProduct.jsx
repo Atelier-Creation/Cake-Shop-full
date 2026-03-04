@@ -17,7 +17,7 @@ const EditProduct = () => {
 
   const [productPhotos, setProductPhotos] = useState([]);
   const [productInfo, setProductInfo] = useState({ productId: "", productName: "", tamilName: "", category: "" });
-  const [productDetails, setProductDetails] = useState({ condition: "", description: "", tamilDescription: "", videoUrl: "", cutType: "", shelfLife: "", storageInstructions: "", certifications: [] });
+  const [productDetails, setProductDetails] = useState({ condition: "", description: "", tamilDescription: "", videoUrl: "", cutType: "", flavor: [], shelfLife: "", storageInstructions: "", certifications: [] });
   const [variants, setVariants] = useState([]);
   const [weightOptions, setWeightOptions] = useState([]);
   const [productManagementData, setProductManagementData] = useState({ isActive: false, stock: "", sku: "", price: "" });
@@ -69,6 +69,7 @@ const EditProduct = () => {
           tamilDescription: data.tamilDescription || "",
           videoUrl: data.productVideoUrl || "",
           cutType: data.cutType || "",
+          flavor: Array.isArray(data.flavor) ? data.flavor : [],
           shelfLife: data.shelfLife || "",
           storageInstructions: data.storageInstructions || "",
           certifications: data.certifications || [],
@@ -146,6 +147,7 @@ const EditProduct = () => {
         tamilDescription: productDetails.tamilDescription,
         productVideoUrl: productDetails.videoUrl,
         cutType: productDetails.cutType,
+        flavor: productDetails.flavor, 
         shelfLife: productDetails.shelfLife,
         storageInstructions: productDetails.storageInstructions,
         certifications: productDetails.certifications,
@@ -177,16 +179,16 @@ const EditProduct = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-white shadow rounded">
       <div className="flex justify-between items-center ">
-        
-      <h2 className="text-2xl font-semibold">Edit Product</h2>
-      <button
-        onClick={() => navigate("/products")}
-        className="bg-gray-300 text-gray-700 px-6 py-2 rounded hover:bg-gray-400"
-      >
-        Back
-      </button>
+
+        <h2 className="text-2xl font-semibold">Edit Product</h2>
+        <button
+          onClick={() => navigate("/products")}
+          className="bg-gray-300 text-gray-700 px-6 py-2 rounded hover:bg-gray-400"
+        >
+          Back
+        </button>
       </div>
-      
+
 
       {/* Photos */}
       <ProductPhotoUpload initialImages={productPhotos} onImagesChange={setProductPhotos} />
@@ -211,6 +213,10 @@ const EditProduct = () => {
         setTamilDescription={(val) => setProductDetails((prev) => ({ ...prev, tamilDescription: val }))}
         cutType={productDetails.cutType}
         setCutType={(val) => setProductDetails((prev) => ({ ...prev, cutType: val }))}
+        flavor={productDetails.flavor}
+        setFlavor={(val) =>
+          setProductDetails((prev) => ({ ...prev, flavor: val }))
+        }
         shelfLife={productDetails.shelfLife}
         setShelfLife={(val) => setProductDetails((prev) => ({ ...prev, shelfLife: val }))}
         storageInstructions={productDetails.storageInstructions}

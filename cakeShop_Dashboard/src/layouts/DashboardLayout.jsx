@@ -9,7 +9,7 @@ export default function DashboardLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-black">
+    <div className="flex h-screen bg-[#2b0d05]">
       {/* Sidebar */}
       <div
         className={`fixed md:static z-40 top-16 left-0 h-full transition-transform duration-300 ease-in-out
@@ -20,7 +20,7 @@ export default function DashboardLayout() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col rounded-none md:rounded-[40px] bg-white md:my-3 md:me-3 w-full">
+      <div className="flex-1 flex flex-col rounded-none md:rounded-[40px] bg-[#fff9ef] md:my-3 md:me-3 w-full">
         <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         <main className="flex-1 overflow-auto rounded-none md:rounded-[40px] p-3">
           <Outlet />

@@ -5,7 +5,7 @@ import CreateCategoryModal from "../molecules/CreateCategoryModal";
 
 const ProductInfoStep = ({
   productId,
-  setProductId, 
+  setProductId,
   productName,
   setProductName,
   tamilName,         // ✅ Add
@@ -30,7 +30,7 @@ const ProductInfoStep = ({
   }, []);
 
 
-  
+
 
   const handleCategoryChange = (e) => {
     const value = e.target.value;
@@ -52,27 +52,27 @@ const ProductInfoStep = ({
       <div className="rounded-lg border p-5 relative z-10 bg-white">
 
         {/* Product ID */}
-<div className="flex flex-col xl:flex-row items-start mb-6">
-  <div className="w-full xl:w-64 xl:mr-10">
-    <label htmlFor="productId" className="font-medium flex items-center">
-      Product ID
-      <span className="ml-3 text-xs text-red-600 border px-2 py-0.5 rounded bg-red-50 border-red-200">
-        Required
-      </span>
-    </label>
-  </div>
-  <div className="flex-1 w-full">
-  <input
-  id="productId"
-  type="text"
-  placeholder="Enter unique product ID"
-  value={productId}
-  onChange={(e) => setProductId(e.target.value)}
-  className="h-10 w-full rounded-md border px-3 py-2"
-/>
+        <div className="flex flex-col xl:flex-row items-start mb-6">
+          <div className="w-full xl:w-64 xl:mr-10">
+            <label htmlFor="productId" className="font-medium flex items-center">
+              Product ID
+              <span className="ml-3 text-xs text-red-600 border px-2 py-0.5 rounded bg-red-50 border-red-200">
+                Required
+              </span>
+            </label>
+          </div>
+          <div className="flex-1 w-full">
+            <input
+              id="productId"
+              type="text"
+              placeholder="Enter unique product ID"
+              value={productId}
+              onChange={(e) => setProductId(e.target.value)}
+              className="h-10 w-full rounded-md border px-3 py-2"
+            />
 
-  </div>
-</div>
+          </div>
+        </div>
 
         {/* Product Name */}
         <div className="flex flex-col xl:flex-row items-start mb-6">
@@ -96,7 +96,7 @@ const ProductInfoStep = ({
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row items-start mb-6">
+        {/* <div className="flex flex-col xl:flex-row items-start mb-6">
           <div className="w-full xl:w-64 xl:mr-10">
             <label htmlFor="tamilName" className="font-medium flex items-center">
               Tamil Name
@@ -115,7 +115,7 @@ const ProductInfoStep = ({
               className="h-10 w-full rounded-md border px-3 py-2"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Category */}
         <div className="flex flex-col xl:flex-row items-start mb-6">

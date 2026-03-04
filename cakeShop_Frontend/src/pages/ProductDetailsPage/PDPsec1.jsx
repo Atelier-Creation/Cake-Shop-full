@@ -319,9 +319,9 @@ function PDPsec1() {
             <p className="text-sm font-medium text-gray-700">Cake Shop</p>
             <h1 className="text-4xl font-bold">
               {product?.name}{" "}
-              <span className="text-sm block mt-3 text-gray-800">
+              {/* <span className="text-sm block mt-3 text-gray-800">
                 ({product?.tamilName})
-              </span>
+              </span> */}
             </h1>
 
             {/* Dynamic Price */}

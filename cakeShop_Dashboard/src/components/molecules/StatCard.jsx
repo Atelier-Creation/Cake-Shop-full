@@ -6,13 +6,13 @@ export default function StatCard({ label, value, icon, diff, color }) {
   flex items-start justify-evenly  hover:scale-100`}
     >
       {icon && (
-        <div className="text-2xl sm:text-3xl text-gray-600 bg-white shadow-gray-100 p-3 rounded-tl-[15px] rounded-br-[15px] rounded-tr-[5px] rounded-bl-[5px] me-3">
+        <div className="text-2xl sm:text-3xl text-[#280a03] bg-white shadow-gray-100 p-3 rounded-tl-[15px] rounded-br-[15px] rounded-tr-[5px] rounded-bl-[5px] me-3">
           {icon}
         </div>
       )}
       <div>
-        <h3 className="text-l font-bold text-[#42427D]">{value}</h3>
-        <p className="text-sm font-medium text-[#42427D]">{label}</p>{" "}
+        <h3 className="text-l font-bold text-[#280a03]">{value}</h3>
+        <p className="text-sm font-medium text-[#280a03]">{label}</p>{" "}
       </div>
       <div className="">
         {diff && (

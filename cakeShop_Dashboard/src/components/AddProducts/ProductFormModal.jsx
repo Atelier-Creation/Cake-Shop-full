@@ -42,6 +42,7 @@ const ProductFormModal = () => {
     tamilDescription: "",
     videoUrl: "",
     cutType: [],
+    flavor: [],
     shelfLife: "",
     storageInstructions: "",
   });
@@ -158,6 +159,7 @@ const ProductFormModal = () => {
         description: productDetails.description,
         tamilDescription: productDetails.tamilDescription,
         cutType: Array.isArray(productDetails.cutType) ? productDetails.cutType : [],
+        flavor: productDetails.flavor,
         shelfLife: productDetails.shelfLife,
         storageInstructions: productDetails.storageInstructions,
         unit: weightShippingData.unit,
@@ -213,6 +215,10 @@ const ProductFormModal = () => {
           setCutType={(val) =>
             setProductDetails((prev) => ({ ...prev, cutType: Array.isArray(val) ? val : [] }))
           }
+          flavor={productDetails.flavor}
+          setFlavor={(val) =>
+            setProductDetails((prev) => ({ ...prev, flavor: val }))
+          }
           shelfLife={productDetails.shelfLife}
           setShelfLife={(val) => setProductDetails((prev) => ({ ...prev, shelfLife: val }))}
           storageInstructions={productDetails.storageInstructions}
@@ -229,7 +235,7 @@ const ProductFormModal = () => {
           addWeightOption={addWeightOption}
           updateWeightOption={updateWeightOption}
           removeWeightOption={removeWeightOption}
-          units={["g", "kg", "piece", "pack"]} // modify to your allowed units
+          units={["g", "kg", "piece",]} // modify to your allowed units
         />
       )}
 
@@ -237,11 +243,10 @@ const ProductFormModal = () => {
         <button
           onClick={prevStep}
           disabled={currentStep === 0}
-          className={`px-6 py-2 rounded-lg font-semibold ${
-            currentStep === 0
-              ? "bg-gray-200 text-gray-500"
-              : "bg-indigo-500 text-white hover:bg-indigo-600"
-          }`}
+          className={`px-6 py-2 rounded-lg font-semibold ${currentStep === 0
+            ? "bg-gray-200 text-gray-500"
+            : "bg-indigo-500 text-white hover:bg-indigo-600"
+            }`}
         >
           Back
         </button>

@@ -33,7 +33,7 @@ export default function Sidebar({ setSidebarOpen }) {
     <aside
       className={`${
         collapsed ? "sm:w-20" : "sm:w-56"
-      } w-80 bg-black text-white h-full p-6 pe-0 transition-[width] duration-300 ease-in-out relative select-none`}
+      } w-80 bg-[#2b0d05] text-white h-full p-6 pe-0 transition-[width] duration-300 ease-in-out relative select-none`}
     >
       {/* Logo */}
       <div
@@ -46,8 +46,8 @@ export default function Sidebar({ setSidebarOpen }) {
           className="text-2xl font-bold transition-all duration-300 ease-in-out select-text"
         >
           <img
-            src={image}
-            className={`${collapsed ? "w-10 h-10" : "w-24 h-auto"}`}
+            src="https://cdn.prod.website-files.com/645b56c820c38b0d6401681d/646cb8d9d8d24a9447a30f28_Logo-pastry.png"
+            className={`${collapsed ? "w-10 h-10 filter brightness-0 invert" : "w-24 h-auto filter brightness-0 invert"}`}
             alt="Logo"
           />
         </a>
@@ -55,7 +55,7 @@ export default function Sidebar({ setSidebarOpen }) {
         <button
           onClick={() => setCollapsed(!collapsed)}
           aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-          className="absolute bottom-14 -right-3 transition-all duration-300 ease-in-out hidden sm:block bg-red-800 text-white p-1 rounded-full shadow-md"
+          className="absolute bottom-14 -right-3 transition-all duration-300 ease-in-out hidden sm:block bg-[#fdc700] text-[#280a03] p-1 rounded-full shadow-md"
         >
           {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
         </button>
@@ -72,8 +72,8 @@ export default function Sidebar({ setSidebarOpen }) {
               collapsed ? "justify-center" : "ps-3 pe-5"
             } py-3 rounded-[13px] rounded-tr-[0px] rounded-br-[0px] transition relative ${
               isActive
-                ? "text-black font-medium active-tab active-tab-bg"
-                : "hover:bg-white hover:text-black"
+                ? "text-[#280a03] font-medium active-tab active-tab-bg"
+                : "hover:bg-[#fff9ef] hover:text-[#280a03]"
             }`
           }
           title={collapsed ? "Dashboard" : undefined}
@@ -90,8 +90,8 @@ export default function Sidebar({ setSidebarOpen }) {
               collapsed ? "justify-center" : "ps-3 pe-5"
             } py-3 rounded-[13px] rounded-tr-[0px] rounded-br-[0px] transition ${
               (isProductActive || productOpen) && !collapsed
-                ? "text-black font-medium bg-white"
-                : "hover:bg-white hover:text-black"
+                ? "text-[#280a03] font-medium bg-[#fff9ef]"
+                : "hover:bg-[#fff9ef] hover:text-[#280a03]"
             }`}
           >
             <BarChart2 />
@@ -115,8 +115,8 @@ export default function Sidebar({ setSidebarOpen }) {
                 className={({ isActive }) =>
                   `block text-sm rounded rounded-r-none px-2 py-2 transition ${
                     isActive
-                      ? "text-black font-medium bg-white active-tab active-tab-bg"
-                      : "hover:bg-white hover:text-black"
+                      ? "text-[#280a03] font-medium bg-white active-tab active-tab-bg"
+                      : "hover:bg-[#fff9ef] hover:text-[#280a03]"
                   }`
                 }
               >
@@ -128,8 +128,8 @@ export default function Sidebar({ setSidebarOpen }) {
                 className={({ isActive }) =>
                   `block text-sm rounded rounded-r-none px-2 py-2 transition ${
                     isActive
-                      ? "text-black font-medium bg-white active-tab active-tab-bg"
-                      : "hover:bg-white hover:text-black"
+                      ? "text-[#280a03] font-medium bg-white active-tab active-tab-bg"
+                      : "hover:bg-[#fff9ef] hover:text-[#280a03]"
                   }`
                 }
               >
@@ -141,8 +141,8 @@ export default function Sidebar({ setSidebarOpen }) {
                 className={({ isActive }) =>
                   `block text-sm rounded rounded-r-none px-2 py-2 transition ${
                     isActive
-                      ? "text-black font-medium bg-white active-tab"
-                      : "hover:bg-white hover:text-black"
+                      ? "text-[#280a03] font-medium bg-white active-tab"
+                      : "hover:bg-[#fff9ef] hover:text-[#280a03]"
                   }`
                 }
               >
@@ -161,8 +161,8 @@ export default function Sidebar({ setSidebarOpen }) {
               collapsed ? "justify-center" : "ps-3 pe-5"
             } py-3 rounded-[13px] rounded-tr-[0px] rounded-br-[0px] transition relative ${
               isActive
-                ? "text-black font-medium active-tab active-tab-bg"
-                : "hover:bg-white hover:text-black"
+                ? "text-[#280a03] font-medium active-tab active-tab-bg"
+                : "hover:bg-[#fff9ef] hover:text-[#280a03]"
             }`
           }
           title={collapsed ? "Orders" : undefined}
@@ -180,8 +180,8 @@ export default function Sidebar({ setSidebarOpen }) {
               collapsed ? "justify-center" : "ps-3 pe-5"
             } py-3 rounded-[13px] rounded-tr-[0px] rounded-r-[0px] transition relative ${
               isActive
-                ? "text-black font-medium active-tab active-tab-bg"
-                : "hover:bg-white hover:text-black"
+                ? "text-[#280a03] font-medium active-tab active-tab-bg"
+                : "hover:bg-[#fff9ef] hover:text-[#280a03]"
             }`
           }
           title={collapsed ? "Payments" : undefined}

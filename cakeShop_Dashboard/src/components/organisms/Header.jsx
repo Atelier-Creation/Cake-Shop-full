@@ -8,7 +8,7 @@ export default function Header({ sidebarOpen, setSidebarOpen }) {
   const [activeProfile, setActiveProfile] = useState(false);
 
   return (
-    <header className="bg-white rounded-tl-[50px] rounded-tr-[50px] py-4 px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 shadow-sm">
+    <header className="bg-[#fff9ef] rounded-tl-[50px] rounded-tr-[50px] py-4 px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 shadow-sm">
       
       {/* Welcome text for desktop */}
       <div className="text-2xl hidden sm:block sm:text-3xl text-[#42427D]">
@@ -31,7 +31,7 @@ export default function Header({ sidebarOpen, setSidebarOpen }) {
           <input
             type="text"
             placeholder="Search..."
-            className="bg-[#F3F6FF] text-[#7979B2] text-sm sm:text-lg border border-transparent rounded-tl-[18px] h-12 rounded-tr-[5px] rounded-br-[18px] rounded-bl-[5px] px-4 py-2 w-full pr-10
+            className="bg-[#80808033] text-[#280a03] text-sm sm:text-lg border border-transparent rounded-tl-[18px] h-12 rounded-tr-[5px] rounded-br-[18px] rounded-bl-[5px] px-4 py-2 w-full pr-10
             focus:border focus:border-gray-300 focus:outline-none transition-colors duration-300 ease-in-out"
           />
           <svg

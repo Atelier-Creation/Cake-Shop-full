@@ -8,7 +8,7 @@
    letter-spacing: .25px;
 }
 .active-tab{
-  background: white;
+  background: #fff9ef;
   transition: background-color 0.4s ease-in-out, color 0.3s ease;
 }
 
