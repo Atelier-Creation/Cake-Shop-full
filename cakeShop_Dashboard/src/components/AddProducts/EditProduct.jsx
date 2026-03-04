@@ -245,7 +245,7 @@ const EditProduct = () => {
       />
 
       <div className="mt-6 flex justify-end">
-        <button onClick={handleSubmit} className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+        <button onClick={handleSubmit} className="bg-[#2a0e05] text-[#fdc700] hover:bg-[#fdc700] hover:text-[#2a0e05] px-6 py-2 rounded">
           Save Changes
         </button>
       </div>

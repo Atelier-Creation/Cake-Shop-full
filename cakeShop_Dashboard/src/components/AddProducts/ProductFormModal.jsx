@@ -182,10 +182,10 @@ const ProductFormModal = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-xl">
+    <div className="max-w-6xl mx-auto p-6 bg-white shadow-lg rounded-xl">
       <h1 className="text-2xl font-bold mb-6 text-center">Add New Product</h1>
 
-      <div className="mb-6 text-center font-medium text-indigo-700">
+      <div className="mb-6 text-center font-medium text-[#fdc700]">
         Step {currentStep + 1} of {steps.length}: {steps[currentStep]}
       </div>
 
@@ -245,7 +245,7 @@ const ProductFormModal = () => {
           disabled={currentStep === 0}
           className={`px-6 py-2 rounded-lg font-semibold ${currentStep === 0
             ? "bg-gray-200 text-gray-500"
-            : "bg-indigo-500 text-white hover:bg-indigo-600"
+            : "bg-[#2a0e05] text-[#fdc700] hover:bg-[#fdc700] hover:text-[#2a0e05]"
             }`}
         >
           Back
@@ -254,7 +254,7 @@ const ProductFormModal = () => {
         {currentStep < steps.length - 1 ? (
           <button
             onClick={nextStep}
-            className="px-6 py-2 rounded-lg font-semibold bg-indigo-600 text-white hover:bg-indigo-700"
+            className="px-6 py-2 rounded-lg font-semibold bg-[#2a0e05] text-[#fdc700] hover:bg-[#fdc700] hover:text-[#2a0e05]"
           >
             Next
           </button>
@@ -262,7 +262,7 @@ const ProductFormModal = () => {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className="px-6 py-2 rounded-lg font-semibold bg-green-600 text-white hover:bg-green-700"
+            className="px-6 py-2 rounded-lg font-semibold bg-[#2a0e05] text-[#fdc700] hover:bg-[#fdc700] hover:text-[#2a0e05]"
           >
             {loading ? "Submitting..." : "Submit Product"}
           </button>

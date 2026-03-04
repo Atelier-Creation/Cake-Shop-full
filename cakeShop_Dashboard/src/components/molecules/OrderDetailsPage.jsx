@@ -312,7 +312,7 @@ export default function OrderDetailsPage() {
         <div className="md:col-span-2 space-y-6">
           {/* Buyer / Payment / Products (same layout) */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white shadow rounded-xl p-6 border-l-4 border-indigo-500 hover:shadow-lg transition">
+            <div className="bg-[#f4ebe2] shadow rounded-xl p-6 border-l-4 border-[#fdc700] hover:shadow-lg transition">
               <h2 className="font-semibold text-lg mb-3 text-gray-700">
                 Buyer Information
               </h2>
@@ -351,7 +351,7 @@ export default function OrderDetailsPage() {
                 {order.deliveryInstructions || "N/A"}
               </p>
             </div>
-            <div className="bg-white shadow rounded-xl p-6 border-l-4 border-green-500 hover:shadow-lg transition">
+            <div className="bg-[#f4ebe2] shadow rounded-xl p-6 border-l-4 border-[#fdc700] hover:shadow-lg transition">
               <h2 className="font-semibold text-lg mb-3 text-gray-700">
                 Payment Information
               </h2>
@@ -427,7 +427,7 @@ export default function OrderDetailsPage() {
         {/* Right column */}
         <div className="space-y-6">
           <div className="">
-            <div className="bg-white shadow-lg rounded-xl p-6 border-t-4 border-indigo-500">
+            <div className="bg-[#f4ebe2] shadow-lg rounded-xl p-6 border-t-4 border-[#fdc700]">
               <h2 className="font-semibold text-lg text-gray-700 mb-4">
                 Order Summary
               </h2>

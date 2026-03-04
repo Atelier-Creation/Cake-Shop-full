@@ -133,7 +133,7 @@ const WeightShippings = ({
         <button
           type="button"
           onClick={addWeight}
-          className="mt-2 px-4 py-2 bg-indigo-500 text-white rounded-md"
+          className="mt-2 px-4 py-2 hover:bg-[#2a0e05] hover:text-[#fdc700] bg-[#fdc700] text-[#2a0e05] rounded-md"
         >
           Add Weight Option
         </button>
