@@ -222,7 +222,7 @@ const CartDrawer = ({ onClose, onRemove, onAddToCart, onCartChange }) => {
               />
               <p>Your cart is empty</p>
               <button
-                className="btn btn-dark mt-3 bg-black text-white py-2 px-5 rounded-md"
+                className="btn btn-dark mt-3 bg-[#fdc700] text-[#2b0d05] font-medium py-2 px-5 rounded-md"
                 onClick={() => {
                   navigate("/collections/all");
                   toggleDrawer(false);
@@ -257,7 +257,7 @@ const CartDrawer = ({ onClose, onRemove, onAddToCart, onCartChange }) => {
                     </p>
                   )}
                   <div className="flex items-center justify-between">
-                    <span className="font-semibold text-[#EE1c25]">
+                    <span className="font-semibold text-[#EF4B5F]">
                       ₹ {item.price?.toFixed(2)} X {item.quantity}
                     </span>
                     <div className="flex items-center border justify-between border-gray-400 rounded-full w-fit">
@@ -291,11 +291,11 @@ const CartDrawer = ({ onClose, onRemove, onAddToCart, onCartChange }) => {
                       aria-label={`Remove ${getDisplayName(item)} from cart`}
                       title="Remove"
                     >
-                      <Trash2 size={18} className="text-red-600" />
+                      <Trash2 size={18} className="text-[#EF4B5F]" />
                     </button>
                   </div>
                   {quantityErrors[getItemKey(item)] && (
-                        <span className="text-red-500 text-xs mt-1">
+                        <span className="text-[#EF4B5F] text-xs mt-1">
                           {quantityErrors[getItemKey(item)]}
                         </span>
                       )}
@@ -316,7 +316,7 @@ const CartDrawer = ({ onClose, onRemove, onAddToCart, onCartChange }) => {
 
             <div className="cart-drawer-footer p-3">
               <button
-                className="border py-3 rounded-2xl w-full border-[#EE1c25] mt-3"
+                className="border py-3 rounded-2xl w-full border-[#EF4B5F] mt-3"
                 onClick={() => {
                   navigate("/view-cart", { state: { cartItems } });
                   toggleDrawer(false);
@@ -325,7 +325,7 @@ const CartDrawer = ({ onClose, onRemove, onAddToCart, onCartChange }) => {
                 View Cart
               </button>
               <button
-                className="w-full border py-3 rounded-2xl border-[#EE1c25] bg-[#EE1c25] text-white mt-3"
+                className="w-full border py-3 rounded-2xl border-[#EF4B5F] bg-[#EF4B5F] text-white mt-3"
                 onClick={() => {
                   navigate("/checkout", { state: { cartItems } });
                   toggleDrawer(false);

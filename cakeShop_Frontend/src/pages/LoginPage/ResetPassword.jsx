@@ -97,7 +97,7 @@ function ResetPassword() {
 
             <button
               onClick={handleSendEmail}
-              className={`py-3 px-7 mt-3 rounded-md text-white ${loading ? "bg-gray-400" : "bg-[#EE1c25]"}`}
+              className={`py-3 px-7 mt-3 rounded-md text-[#2b0d05] font-semibold ${loading ? "bg-gray-400" : "bg-[#fdc700]"}`}
               disabled={loading}
             >
               {loading ? "Submitting..." : "Send Email"}
@@ -123,7 +123,7 @@ function ResetPassword() {
             />
             <button
               onClick={handleResetPassword}
-              className={`py-3 px-7 mt-3 rounded-md text-white ${loading ? "bg-gray-400" : "bg-[#EE1c25]"}`}
+              className={`py-3 px-7 mt-3 rounded-md text-[#2b0d05] font-semibold ${loading ? "bg-gray-400" : "bg-[#fdc700]"}`}
               disabled={loading}
             >
               {loading ? "Submitting..." : "Reset Password"}

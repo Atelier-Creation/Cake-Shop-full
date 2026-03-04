@@ -340,7 +340,7 @@ export const QuickModal = ({ productId }) => {
           <p className="text-gray-500 line-through">
             Rs. {selected?.discountPrice}
           </p>
-          <button className="bg-[#EE1c25] text-white text-base px-5 py-0.5 rounded-md">
+          <button className="bg-[#fdc700] text-[#2b0d05] font-medium text-base px-5 py-0.5 rounded-md">
             sale
           </button>
         </div>
@@ -360,7 +360,7 @@ export const QuickModal = ({ productId }) => {
                       isOutOfStock
                         ? "bg-gray-200 text-gray-500 border-gray-300 cursor-not-allowed"
                         : selected?._id === opt._id
-                        ? "bg-[#EE1c25] text-white border-[#EE1c25]"
+                        ? "bg-[#fdc700] text-[#2b0d05] font-medium border-[#fdc700]"
                         : "bg-transparent text-black border-gray-400"
                     }`}
                   >
@@ -396,7 +396,7 @@ export const QuickModal = ({ productId }) => {
         <div className="flex items-center border border-gray-400  w-fit rounded-full lg:my-3 my-2">
           <button
             onClick={decrease}
-            className="px-3 py-3 rounded-l-full cursor-pointer transition-colors duration-200 bg-transparent text-gray-800 hover:bg-red-100 active:bg-red-500 active:text-white"
+            className="px-3 py-3 rounded-l-full cursor-pointer transition-colors duration-200 bg-transparent text-gray-800 hover:bg-red-100 active:bg-[#EF4B5F] active:text-white"
           >
             <FaMinus size={15} />
           </button>
@@ -410,7 +410,7 @@ export const QuickModal = ({ productId }) => {
 
           <button
             onClick={increase}
-            className="px-3 py-3 rounded-r-full cursor-pointer transition-colors duration-200 bg-transparent text-gray-800 hover:bg-red-100 active:bg-red-500 active:text-white"
+            className="px-3 py-3 rounded-r-full cursor-pointer transition-colors duration-200 bg-transparent text-gray-800 hover:bg-red-100 active:bg-[#EF4B5F] active:text-white"
           >
             <FaPlus size={15} />
           </button>
@@ -420,14 +420,14 @@ export const QuickModal = ({ productId }) => {
         )}
         <div className="flex flex-col gap-3">
           <button
-            className="border py-3 rounded-md border-[#EE1c25]"
+            className="border py-3 rounded-md border-[#fdc700]"
             onClick={handleAddToCart}
           >
             Add to cart
           </button>
           <button
             onClick={handleBuyNow}
-            className="border py-3 rounded-md border-[#EE1c25] bg-[#EE1c25] text-white"
+            className="border py-3 rounded-md border-[#fdc700] bg-[#fdc700] text-[#2b0d05] font-medium"
           >
             Buy it now
           </button>

@@ -43,14 +43,14 @@ const PDPsec3 = ({
     <div className="block px-4 py-6 lg:px-10 lg:mt-10">
       <div className="lg:flex lg:justify-between items-center">
         <div>
-          <h2 className="text-xl font-bold mb-4 lg:mb-8 lg:text-4xl">{title}</h2>
+          <h2 className="text-xl font-bold mb-4 lg:mb-8 lg:text-4xl text-[#2b0d05]">{title}</h2>
         </div>
 
         {onViewAll && (
           <div className="hidden lg:block mt-6 text-center">
             <button
               onClick={onViewAll}
-              className="bg-[#EE1c25] text-white px-6 py-2 rounded-md font-medium"
+              className="bg-[#EF4B5F] text-white px-6 py-2 rounded-md font-medium"
             >
               View all
             </button>
@@ -70,7 +70,7 @@ const PDPsec3 = ({
             {/* Sale Tag */}
             <div className="relative">
               {item.status === "Sale" && (
-                <span className="absolute top-2 left-2 bg-[#EE1c25] text-white text-xs px-2 py-0.5 rounded-md">
+                <span className="absolute top-2 left-2 bg-[#EF4B5F] text-white text-xs px-2 py-0.5 rounded-md">
                   Sale
                 </span>
               )}
@@ -83,7 +83,7 @@ const PDPsec3 = ({
               />
 
               {/* Quick View / Eye Icon */}
-              <span className="absolute bottom-2 right-2 bg-[#EE1c25] text-white text-xs px-2.5 py-2 rounded-md">
+              <span className="absolute bottom-2 right-2 bg-[#fdc700] text-[#2b0d05] text-xs px-2.5 py-2 rounded-md">
                 <Eye size={18} />
               </span>
             </div>
@@ -92,7 +92,7 @@ const PDPsec3 = ({
             <div className="p-2">
               <p className="text-md font-medium line-clamp-2">{item.name}</p>
               <div className="mt-2 flex items-center gap-2">
-                <span className="text-[#EE1c25] font-semibold text-md">
+                <span className="text-[#2b0d05] font-semibold text-md">
                   ₹{item.weightOptions?.[0]?.price || 0}.00
                 </span>
                 {item.weightOptions?.[0]?.discountPrice && (

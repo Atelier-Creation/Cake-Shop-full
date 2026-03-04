@@ -226,7 +226,7 @@ const Collectiongrid = () => {
                         e.stopPropagation();
                         handleBuyNow(item.id);
                       }}
-                      className="hidden md:inline-flex cursor-pointer absolute inset-x-4 bottom-4 bg-red-800 text-white text-sm py-2 rounded-md opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-1 z-20"
+                      className="hidden md:inline-flex cursor-pointer absolute inset-x-4 bottom-4 bg-[#fdc700] text-[#2b0d05] text-sm py-2 rounded-md opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-1 z-20"
                       aria-hidden="false"
                     >
                       Quick Shop <Eye size={14} />
@@ -244,7 +244,7 @@ const Collectiongrid = () => {
                       {item.title.ta}
                     </p>
                     <div className="mt-2 flex items-center gap-2">
-                      <span className="text-red-800 font-semibold">{item.price}</span>
+                      <span className="text-[#2b0d05] font-semibold">{item.price}</span>
                       <span className="text-gray-400 line-through text-sm">
                         {item.oldPrice}
                       </span>
@@ -263,7 +263,7 @@ const Collectiongrid = () => {
                 onClick={() => setCurrentPage(i + 1)}
                 className={`px-3 py-1 rounded ${
                   currentPage === i + 1
-                    ? "bg-red-800 text-white"
+                    ? "bg-[#fdc700] text-[#2b0d05]"
                     : "bg-gray-100 text-gray-700"
                 }`}
               >

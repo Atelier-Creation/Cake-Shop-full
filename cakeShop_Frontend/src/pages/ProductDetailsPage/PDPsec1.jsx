@@ -16,6 +16,7 @@ import Navbar from "../MobileDesign/Navbar";
 import { useNavigate, useParams } from "react-router-dom";
 import { getProductById } from "../../api/productApi";
 import { addToCartAPI } from "../../api/cartApi";
+import CakeNavbar from "../MobileDesign/CakeNavbar";
 
 function PDPsec1() {
   const navigate = useNavigate();
@@ -287,7 +288,7 @@ function PDPsec1() {
 
   return (
     <>
-      <Navbar />
+      <CakeNavbar />
 
       <div className="flex flex-col md:flex-row lg:flex-row justify-evenly gap-3 mt-5 lg:p-10 md:p-10 p-3">
         <div className="lg:w-3/4 md:w-3/4 lg:px-10 flex flex-col gap-8 w-full">
@@ -315,7 +316,7 @@ function PDPsec1() {
 
         <div className="relative lg:w-1/2 md:w-1/2 w-full">
           <div className="flex flex-col gap-3">
-            <p className="text-sm font-medium text-gray-700">Iraichi Kadai</p>
+            <p className="text-sm font-medium text-gray-700">Cake Shop</p>
             <h1 className="text-4xl font-bold">
               {product?.name}{" "}
               <span className="text-sm block mt-3 text-gray-800">
@@ -337,7 +338,7 @@ function PDPsec1() {
                   product?.weightOptions?.[0]?.discountPrice?.toFixed(2) ??
                   ""}
               </p>
-              <button className="bg-[#EE1c25] text-white text-base px-5 py-0.5 rounded-md">
+              <button className="bg-[#EF4B5F] text-white text-base px-5 py-0.5 rounded-md">
                 sale
               </button>
             </div>
@@ -356,13 +357,13 @@ function PDPsec1() {
                         className={`lg:px-5 lg:py-2 px-3 py-2 rounded-md cursor-pointer text-base border transition duration-300 ${isOutOfStock
                             ? "bg-gray-200 text-gray-500 border-gray-300 cursor-not-allowed"
                             : selected?._id === opt._id
-                              ? "bg-[#EE1c25] text-white border-[#EE1c25]"
+                              ? "bg-[#EF4B5F] text-white border-[#EF4B5F]"
                               : "bg-transparent text-black border-gray-400"
                           }`}
                       >
                         {opt.weight} {opt.unit}
                       </button>
-                      <p className="mt-1 text-[#EE1c25]">
+                      <p className="mt-1 text-[#EF4B5F]">
                         {isOutOfStock && `${opt.weight}${opt.unit} (Out of Stock)`}
                       </p>
                     </div>
@@ -426,7 +427,7 @@ function PDPsec1() {
 
                 <button
                   onClick={increase}
-                  className="px-3 py-3 rounded-r-md cursor-pointer transition-colors duration-200 bg-transparent text-gray-800 hover:bg-red-100 active:bg-red-500 active:text-white"
+                  className="px-3 py-3 rounded-r-md cursor-pointer transition-colors duration-200 bg-transparent text-gray-800 hover:bg-red-100 active:bg-[#EF4B5F] active:text-white"
                 >
                   <FaPlus size={15} />
                 </button>
@@ -438,14 +439,14 @@ function PDPsec1() {
 
             <div className="flex flex-col gap-3 lg:pr-10">
               <button
-                className="border py-3 rounded-2xl border-[#EE1c25]"
+                className="border py-3 rounded-2xl border-[#EF4B5F]"
                 onClick={handleAddToCart}
               >
                 Add to cart
               </button>
               <button
                 onClick={handleBuyNow}
-                className="border py-3 rounded-2xl border-[#EE1c25] bg-[#EE1c25] text-white"
+                className="border py-3 rounded-2xl border-[#EF4B5F] bg-[#EF4B5F] text-white"
               >
                 Buy it now
               </button>

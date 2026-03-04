@@ -1,9 +1,11 @@
 import { ArrowRight, ChevronLeft } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const MobileFooter = () => {
+  const navigate = useNavigate()
   return (
-    <footer className="bg-[#f4ebe2] text-[#2a0e05] md:pt-16 pt-6 px-5">
+    <footer id="contact" className="bg-[#f4ebe2] text-[#2a0e05] md:pt-16 pt-6 px-5">
       <div className="max-w-7xl mx-auto">
 
         {/* Top Section */}
@@ -62,22 +64,17 @@ const MobileFooter = () => {
             <div>
               <h3 className="text-xl font-semibold mb-6">Useful link</h3>
               <ul className="space-y-3 text-[#5a5a5a] font-medium text-base">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Blog</li>
-                <li>Search results</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#contact">Contact</a></li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold mb-6">Our utilities</h3>
               <ul className="space-y-3 text-[#5a5a5a] font-medium text-base">
-                <li>Style guide</li>
-                <li>Changelog</li>
-                <li>Licenses</li>
-                <li>Protected page</li>
-                <li>404</li>
+                <li className="cursor-pointer" onClick={()=>navigate("/terms-conditions")}>Terms</li>
+                <li className="cursor-pointer" onClick={()=>navigate("/privacy-policy")}>Privacy Policy</li>
               </ul>
             </div>
           </div>
@@ -97,13 +94,13 @@ const MobileFooter = () => {
             </div>
 
             <p className="text-[#5a5a5a] text-base">
-              © 2025 Bisqueria made by Themetechmount powered by Webflow
+              © 2025 Bisqueria made by Atelier Creation
             </p>
           </div>
 
           {/* Big Right Text */}
           <div className="md:text-[130px] text-5xl mx-auto lg:mx-0 font-extrabold leading-none">
-            Bisqueria
+            Cake Shop
           </div>
         </div>
       </div>

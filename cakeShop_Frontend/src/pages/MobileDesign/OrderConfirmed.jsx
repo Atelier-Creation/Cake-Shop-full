@@ -60,7 +60,7 @@ const OrderConfirmed = () => {
       <div className="flex justify-center items-center min-h-screen bg-white">
         <div className="text-center">
           <img
-            src="/logo.svg"
+            src="https://cdn.prod.website-files.com/645b56c820c38b0d6401681d/646cb8d9d8d24a9447a30f28_Logo-pastry.png"
             alt="logo"
             className="w-32 lg:w-62 h-32 lg:h-62 mx-auto"
           />
@@ -96,7 +96,7 @@ const OrderConfirmed = () => {
             will process your order within <strong>1hr</strong>.
           </p>
           <button
-            className="bg-black text-white px-6 py-3 mt-4 rounded-md hover:bg-gray-900 transition-colors"
+            className="bg-[#fdc700] text-[#2b0d05] font-medium px-6 py-3 mt-4 rounded-md"
             onClick={() => navigate("/")}
           >
             Return to Home
@@ -108,7 +108,7 @@ const OrderConfirmed = () => {
                 href="mailto:ecom@Iraichikadai.store"
                 className="text-blue-600 underline"
               >
-                ecom@Iraichikadai.store
+                https://cake-shop-full.vercel.app/
               </a>
             </p>
           </div>
@@ -130,7 +130,7 @@ const OrderConfirmed = () => {
       </p>
       <div className="flex gap-4 flex-wrap justify-center">
         <button
-          className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-900 transition-colors"
+          className="bg-[#fdc700] text-[#2b0d05] font-medium px-6 py-3 rounded-md"
           onClick={() => navigate("/")}
         >
           Return to Home

@@ -41,66 +41,75 @@ const MobileCategorySlider = () => {
   }, []);
 
   return (
-    <div className="w-full px-5 lg:px-12 mb-10 mt-6 lg:mt-12 overflow-hidden">
-      <div className="flex justify-between items-end mb-8" data-aos="fade-up">
-        <div>
-          <p className="text-[#EF4B5F] text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-2 drop-shadow-sm">
-            Cakes
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#2a0e05]" style={{ fontFamily: "'Dancing Script', cursive, serif" }}>
-            Our Favourites
-          </h2>
-        </div>
-        <button
-          onClick={() => navigate("/collections/all")}
-          className="text-sm md:text-base font-semibold text-[#5a5a5a] hover:text-black mb-1 md:mb-2 transition-colors cursor-pointer"
-        >
-          Explore More
-        </button>
-      </div>
-
-      <Swiper
-        modules={[Autoplay]}
-        spaceBetween={20}
-        slidesPerView={1.5}
-        breakpoints={{
-          480: { slidesPerView: 2.2 },
-          768: { slidesPerView: 3.2 },
-          1024: { slidesPerView: 4 },
+    <div className="relative w-full px-5 lg:px-12 mb-10 mt-6 lg:mt-12 overflow-hidden">
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0  bg-no-repeat  bg-left opacity-5"
+        style={{
+          backgroundImage: "url('https://img.freepik.com/free-vector/sketch-doodle-sweets-candy-ice-cream-illustration_1284-52016.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80')"
         }}
-        loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        className="py-6"
-      >
-        {collections.map((item, idx) => (
-          <SwiperSlide key={idx}>
-            <div
-              onClick={() => navigate(`/collections/${item.id}`)}
-              className="flex flex-col items-center justify-center cursor-pointer group"
-              data-aos="fade-up"
-              data-aos-delay={idx * 100}
-            >
-              <div className="relative mb-5 w-44 h-44 md:w-56 md:h-56 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2">
-                {item.soldOut && (
-                  <div className="absolute top-2 md:top-4 right-0 md:right-4 z-10 bg-[#EF4B5F] text-white text-[10px] md:text-sm font-bold px-3 py-1 rounded-full shadow-md">
-                    Sold Out
-                  </div>
-                )}
-                <img
-                  src={item.img}
-                  alt={item.title.en}
-                  className="w-full h-full object-cover rounded-full  group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+      ></div>
+      <div>
+        <div className="flex justify-between items-end mb-8" data-aos="fade-up">
+          <div>
+            <p className="text-[#EF4B5F] text-xs md:text-sm font-bold tracking-[0.2em] uppercase mb-2 drop-shadow-sm">
+              Cakes
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#2a0e05]" style={{ fontFamily: "'Dancing Script', cursive, serif" }}>
+              Our Favourites
+            </h2>
+          </div>
+          <button
+            onClick={() => navigate("/collections/all")}
+            className="text-sm md:text-base font-semibold text-[#5a5a5a] hover:text-black mb-1 md:mb-2 transition-colors cursor-pointer"
+          >
+            Explore More
+          </button>
+        </div>
 
-              <h3 className="text-center text-[#2a0e05] text-lg md:text-xl font-medium px-2 italic font-serif group-hover:text-[#2a0e05] transition-colors leading-tight">
-                {item.title.en}
-              </h3>
-              <p className="text-[#5a5a5a] text-xs md:text-sm mt-2 font-medium">{item.title.ta}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1.5}
+          breakpoints={{
+            480: { slidesPerView: 2.2 },
+            768: { slidesPerView: 3.2 },
+            1024: { slidesPerView: 4 },
+          }}
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          className="py-6"
+        >
+          {collections.map((item, idx) => (
+            <SwiperSlide key={idx}>
+              <div
+                onClick={() => navigate(`/collections/${item.id}`)}
+                className="flex flex-col items-center justify-center cursor-pointer group"
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
+              >
+                <div className="relative mb-5 w-44 h-44 md:w-56 md:h-56 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2">
+                  {item.soldOut && (
+                    <div className="absolute top-2 md:top-4 right-0 md:right-4 z-10 bg-[#EF4B5F] text-white text-[10px] md:text-sm font-bold px-3 py-1 rounded-full shadow-md">
+                      Sold Out
+                    </div>
+                  )}
+                  <img
+                    src={item.img}
+                    alt={item.title.en}
+                    className="w-full h-full object-cover rounded-full  group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+
+                <h3 className="text-center text-[#2a0e05] text-lg md:text-xl font-medium px-2 italic font-serif group-hover:text-[#2a0e05] transition-colors leading-tight">
+                  {item.title.en}
+                </h3>
+                <p className="text-[#5a5a5a] text-xs md:text-sm mt-2 font-medium">{item.title.ta}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

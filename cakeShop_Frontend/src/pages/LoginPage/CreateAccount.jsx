@@ -200,7 +200,7 @@ function CreateAccount() {
           )}
         </div>
 
-        <div className="text-start text-[#EE1c25] w-full">
+        <div className="text-start text-[#2b0d05] w-full">
           <a href={loginHref} className="border-b text-start">
             Already have an account? Login
           </a>
@@ -210,7 +210,7 @@ function CreateAccount() {
           <button
             onClick={handleCreate}
             disabled={loading}
-            className="py-3 px-7 bg-[#EE1c25] text-white rounded-md mt-3 cursor-pointer disabled:opacity-60"
+            className="py-3 px-7 bg-[#fdc700] text-[#2b0d05] font-semibold rounded-md mt-3 cursor-pointer disabled:opacity-60"
           >
             {loading ? "Creating..." : "Create"}
           </button>

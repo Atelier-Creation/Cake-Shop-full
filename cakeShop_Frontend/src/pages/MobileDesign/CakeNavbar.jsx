@@ -1,91 +1,228 @@
-import React, { useState } from "react";
-import { Menu, ShoppingCart, User, X } from "lucide-react";
+import React, { useEffect, useState, useCallback } from "react";
+import { MapPin, Menu, Search, User, X } from "lucide-react";
+import { MdOutlineShoppingBag } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../../components/CartDrawer/CartContext";
+import CartDrawer from "../../components/CartDrawer/CartDrawer";
+import { getCartByUserId } from "../../api/cartApi";
+import LocationDropdown from "../../components/LocationDropdown";
 
 const CakeNavbar = () => {
+    const navigate = useNavigate();
+    const { toggleDrawer } = useCart();
+
     const [isOpen, setIsOpen] = useState(false);
+    const [cartCount, setCartCount] = useState(0);
+    const [userInitial, setUserInitial] = useState(null);
+    const [topNav, setTopNav] = useState(true)
+    // ---------- Guest Cart ----------
+    const getGuestCartCount = useCallback(() => {
+        try {
+            const raw = localStorage.getItem("guest_cart");
+            const cart = raw ? JSON.parse(raw) : [];
+            return Array.isArray(cart) ? cart.length : 0;
+        } catch {
+            return 0;
+        }
+    }, []);
+
+    // ---------- User Initial ----------
+    const updateUserInitial = useCallback(() => {
+        const userStr = localStorage.getItem("user");
+        if (!userStr) {
+            setUserInitial(null);
+            return;
+        }
+
+        try {
+            const user = JSON.parse(userStr);
+            const name = user?.name || user?.fullName;
+            if (name) {
+                setUserInitial(name.charAt(0).toUpperCase());
+            }
+        } catch {
+            setUserInitial(null);
+        }
+    }, []);
+
+    // ---------- Fetch Cart ----------
+    const fetchCart = useCallback(async () => {
+        try {
+            const token = localStorage.getItem("token");
+
+            if (!token) {
+                setCartCount(getGuestCartCount());
+                return;
+            }
+
+            const res = await getCartByUserId();
+            setCartCount(res?.data?.items?.length || 0);
+        } catch {
+            setCartCount(getGuestCartCount());
+        }
+    }, [getGuestCartCount]);
+
+    // ---------- Init ----------
+    useEffect(() => {
+        updateUserInitial();
+        fetchCart();
+
+        const handleStorage = () => {
+            updateUserInitial();
+            fetchCart();
+        };
+
+        window.addEventListener("storage", handleStorage);
+        window.addEventListener("authChanged", handleStorage);
+
+        return () => {
+            window.removeEventListener("storage", handleStorage);
+            window.removeEventListener("authChanged", handleStorage);
+        };
+    }, [updateUserInitial, fetchCart]);
+
+    // ---------- Account Click ----------
+    const handleAccountClick = () => {
+        const token = localStorage.getItem("token");
+
+        if (token) {
+            navigate("/profile");
+        } else {
+            localStorage.setItem(
+                "postLoginRedirect",
+                JSON.stringify({ path: window.location.pathname })
+            );
+            navigate("/login");
+        }
+    };
 
     return (
-        <nav className="w-full bg-[#fff9ef] py-2.5 relative">
-            <div className="mx-auto flex items-center justify-between px-4">
-
-                {/* Left Links (Desktop) */}
-                <div className="hidden lg:flex flex-1 justify-center gap-8 lg:gap-12">
-                    <a href="/" className="text-[#2b0d05] font-medium hover:opacity-70 transition-opacity">
-                        Home
-                    </a>
-                    <a href="/collections/all" className="text-[#2b0d05] font-medium hover:opacity-70 transition-opacity">
-                        Product
-                    </a>
+        <div>
+            {topNav && (
+                <div className="relative flex justify-center py-2 items-center bg-[#2b0d05]">
+                    <LocationDropdown />
+                    <div onClick={() => setTopNav(false)} className="absolute md:right-1/4 right-2 cursor-pointer ">
+                        <X size={20} color="#fdc700" />
+                    </div>
                 </div>
+            )
+            }
+            <nav className="w-full bg-[#fff9ef] py-2.5 relative">
+                <div className="mx-auto flex items-center justify-between px-4">
 
-                {/* Center Logo */}
-                <div className="flex-none px-6 lg:px-20">
-                    <a href="/" className="flex flex-col items-center">
+                    {/* Left Links (Desktop) */}
+                    <div className="hidden lg:flex flex-1 justify-center gap-12">
+                        <a href="/" className="text-[#2b0d05] font-medium">
+                            Home
+                        </a>
+                        <a href="/collections/all" className="text-[#2b0d05] font-medium">
+                            Product
+                        </a>
+                    </div>
+
+                    {/* Center Logo */}
+                    <div className="flex-none px-6 lg:px-20 cursor-pointer" onClick={() => navigate("/")}>
                         <img
                             src="https://cdn.prod.website-files.com/645b56c820c38b0d6401681d/646cb8d9d8d24a9447a30f28_Logo-pastry.png"
                             alt="Pastry Bakery Shop"
                             className="w-20 h-auto"
                         />
-                    </a>
-                </div>
-
-                {/* Right Links (Desktop) */}
-                <div className="hidden lg:flex flex-1 justify-center items-center gap-8 lg:gap-12 relative">
-                    <a href="/#about" className="text-[#2b0d05] font-medium hover:opacity-70 transition-opacity">
-                        About us
-                    </a>
-                    <a href="/#contact" className="text-[#2b0d05] font-medium hover:opacity-70 transition-opacity">
-                        Contact us
-                    </a>
-                    <div className="flex gap-3 absolute right-0">
-                        <div className="bg-[#2b0d05] text-white h-8 flex justify-center items-center w-8 rounded-full">
-                            <User size={20} />
-                        </div>
-                        <div className="bg-[#2b0d05] text-white h-8 flex justify-center items-center w-8 rounded-full">
-                            <ShoppingCart size={20} />
-                        </div>
                     </div>
-                </div>
 
-                {/* Mobile Menu Button */}
-                <div className="lg:hidden flex items-center">
-                    <button
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="text-[#2b0d05] p-2"
-                    >
-                        {isOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
-                    <div className="flex gap-3">
-                        <div className="bg-[#2b0d05] text-white h-8 flex justify-center items-center w-8 rounded-full">
-                            <User size={20} />
-                        </div>
-                        <div className="bg-[#2b0d05] text-white h-8 flex justify-center items-center w-8 rounded-full">
-                            <ShoppingCart size={20} />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Mobile Dropdown Menu */}
-            {isOpen && (
-                <div className="lg:hidden absolute top-full left-0 w-full bg-[#fff9ef] shadow-md z-20">
-                    <div className="flex flex-col items-center gap-6 py-6">
-                        <a href="/" onClick={() => setIsOpen(false)} className="text-[#2b0d05] font-medium">
-                            Home
-                        </a>
-                        <a href="/collections/all" onClick={() => setIsOpen(false)} className="text-[#2b0d05] font-medium">
-                            Product
-                        </a>
-                        <a href="/#about" onClick={() => setIsOpen(false)} className="text-[#2b0d05] font-medium">
+                    {/* Right Side (Desktop) */}
+                    <div className="hidden lg:flex flex-1 justify-center items-center gap-12 relative">
+                        <a href="/#about" className="text-[#2b0d05] font-medium">
                             About us
                         </a>
-                        <a href="/#contact" onClick={() => setIsOpen(false)} className="text-[#2b0d05] font-medium">
+                        <a href="/#contact" className="text-[#2b0d05] font-medium">
                             Contact us
                         </a>
+
+                        <div className="flex gap-3 absolute right-0">
+
+                            {/* Search */}
+                            <div
+                                onClick={handleAccountClick}
+                                className="bg-[#2b0d05] text-white h-8 w-8 flex justify-center items-center rounded-full cursor-pointer"
+                            >
+                                    <Search size={18} />
+                            </div>
+                            {/* Account */}
+                            <div
+                                onClick={handleAccountClick}
+                                className="bg-[#2b0d05] text-white h-8 w-8 flex justify-center items-center rounded-full cursor-pointer"
+                            >
+                                {userInitial ? (
+                                    <span className="font-bold">{userInitial}</span>
+                                ) : (
+                                    <User size={18} />
+                                )}
+                            </div>
+
+                            {/* Cart */}
+                            <div
+                                onClick={() => toggleDrawer(true)}
+                                className="relative bg-[#2b0d05] text-white h-8 w-8 flex justify-center items-center rounded-full cursor-pointer"
+                            >
+                                <MdOutlineShoppingBag size={18} />
+                                {cartCount > 0 && (
+                                    <span className="absolute -top-2 -right-2 bg-yellow-400 text-red-800 text-xs font-bold px-1.5 py-0.5 rounded-full">
+                                        {cartCount}
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mobile */}
+                    <div className="lg:hidden flex items-center gap-3">
+                        <button onClick={() => setIsOpen(!isOpen)}>
+                            {isOpen ? <X size={26} /> : <Menu size={26} />}
+                        </button>
+
+                        {/* Account */}
+                        <div
+                            onClick={handleAccountClick}
+                            className="relative bg-[#2b0d05] text-white h-8 w-8 flex justify-center items-center rounded-full cursor-pointer"
+                        >
+                            {userInitial ? (
+                                <span className="font-bold">{userInitial}</span>
+                            ) : (
+                                <User size={18} />
+                            )}
+                        </div>
+
+                        {/* Cart */}
+                        <div
+                            onClick={() => toggleDrawer(true)}
+                            className="relative bg-[#2b0d05] text-white h-8 w-8 flex justify-center items-center rounded-full cursor-pointer"
+                        >
+                            <MdOutlineShoppingBag size={18} />
+                            {cartCount > 0 && (
+                                <span className="absolute -top-2 -right-2 bg-yellow-400 text-red-800 text-xs font-bold px-1.5 py-0.5 rounded-full">
+                                    {cartCount}
+                                </span>
+                            )}
+                        </div>
                     </div>
                 </div>
-            )}
-        </nav>
+
+                {/* Mobile Dropdown */}
+                {isOpen && (
+                    <div className="lg:hidden absolute top-full left-0 w-full bg-[#fff9ef] shadow-md z-20">
+                        <div className="flex flex-col items-center gap-6 py-6">
+                            <a href="/" onClick={() => setIsOpen(false)}>Home</a>
+                            <a href="/collections/all" onClick={() => setIsOpen(false)}>Product</a>
+                            <a href="/#about" onClick={() => setIsOpen(false)}>About us</a>
+                            <a href="/#contact" onClick={() => setIsOpen(false)}>Contact us</a>
+                        </div>
+                    </div>
+                )}
+
+                {/* Cart Drawer */}
+                <CartDrawer onCartChange={fetchCart} />
+            </nav>
+        </div>
     );
 };
 

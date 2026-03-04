@@ -10,6 +10,7 @@ import {
   updateCartItemAPI,
 } from "../../api/cartApi";
 import { useModal } from "../../context/GlobalModal";
+import CakeNavbar from "./CakeNavbar";
 
 export default function ShoppingCart() {
   const navigate = useNavigate();
@@ -113,7 +114,7 @@ export default function ShoppingCart() {
 
   return (
     <>
-      <Navbar />
+      <CakeNavbar />
 
       <div className="max-w-7xl mx-auto px-4 py-10">
         <h2 className="text-center text-2xl tracking-wide font-bold mb-10">
@@ -155,7 +156,7 @@ export default function ShoppingCart() {
                   <p className="font-semibold text-base">{name}</p>
                   <p className="text-sm text-gray-500">
                     Weight:{" "}
-                    <span className="text-red-600">
+                    <span className="text-[#EF4B5F]">
                       {weight} {item.unit || "pcs"}
                     </span>
                   </p>
@@ -215,7 +216,7 @@ export default function ShoppingCart() {
 
                 <button
                   onClick={() => handleRemove(item._id || item.id)}
-                  className="ml-3 text-gray-600 hover:text-red-600"
+                  className="ml-3 text-gray-600 hover:text-[#EF4B5F]"
                 >
                   <Trash2 size={18} />
                 </button>
@@ -232,7 +233,7 @@ export default function ShoppingCart() {
 
         {cartItems.length < 0 && <div className="mt-6">
           <button
-            className="bg-black text-white w-[100%] lg:w-auto px-6 py-3 lg:py-2 rounded-xs font-medium text-sm"
+            className="bg-[#fdc700] text-[#2b0d05] w-[100%] lg:w-auto px-6 py-3 lg:py-2 rounded-xs font-medium text-sm"
             onClick={() => navigate("/collections")}
           >
             CONTINUE SHOPPING
@@ -257,12 +258,12 @@ export default function ShoppingCart() {
               isMobile ? "items-start" : "items-end"
             } justify-start`}
           >
-            <p className="text-lg font-semibold">Subtotal ₹ <strong className="text-2xl text-red-700"> {subtotal}</strong></p>
+            <p className="text-lg font-semibold">Subtotal ₹ <strong className="text-2xl text-[#EF4B5F]"> {subtotal}</strong></p>
             <p className="text-sm text-gray-500 mt-1 mb-4">
               Taxes and Shipping Calculated at Checkout
             </p>
             <button
-              className="bg-black text-white w-[100%] py-4 lg:w-auto px-8 lg:py-2 rounded font-medium text-sm"
+              className="bg-[#fdc700] text-[#2b0d05] w-[100%] py-4 lg:w-auto px-8 lg:py-2 rounded font-medium text-sm"
               onClick={() => {
                 const token = localStorage.getItem("token");
                 if (!token) {

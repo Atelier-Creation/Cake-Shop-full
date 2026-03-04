@@ -4,7 +4,7 @@ export default function AboutUs() {
   const videoId = "HTXB6flODww";
 
   return (
-    <section className="w-full bg-[#5b2c26] py-10 md:py-6 my-10">
+    <section id="about" className="w-full bg-[#5b2c26] py-10 md:py-6 my-10">
       <div className="mx-auto px-4">
 
         {/* Cream Main Container */}

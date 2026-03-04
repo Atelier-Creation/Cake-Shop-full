@@ -11,6 +11,7 @@ import Navbar from "../../pages/MobileDesign/Navbar";
 import MobileNavbar from "../../pages/MobileDesign/MobileNavbar";
 import MobileFooter from "../../pages/MobileDesign/MobileFooter";
 import IconMenu from "../../pages/MobileDesign/MobileIconMenu";
+import CakeNavbar from "../../pages/MobileDesign/CakeNavbar";
 
 const menuItems = [
   { label: "Chicken", link: "/collections/chicken", icon: "//lenaturelmeat.com/cdn/shop/files/turkey-chicken-svgrepo-com_32x32.svg?v=1752237020" },
@@ -49,7 +50,7 @@ function ProfilePage() {
 
   return (
     <>
-      <Navbar />
+      <CakeNavbar />
 
       <div className="categories-page-container"></div>
       <div className="profile-page-wrapper">

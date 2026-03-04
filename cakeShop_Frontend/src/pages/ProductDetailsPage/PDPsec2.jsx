@@ -8,29 +8,41 @@ import "swiper/css/pagination";
 
 const data = [
   {
-    head: "What makes Iraichi Kadai Mutton Keema flavorful and tender",
-    para: `Iraichi Kadai Mutton Keema is freshly minced to deliver rich, authentic flavor and a soft, tender texture for every dish.`,
+    head: "What makes our cakes soft, moist, and delicious?",
+    para: `Our cakes are baked fresh daily using premium ingredients, ensuring a rich flavor, soft texture, and perfect sweetness in every bite.`,
   },
   {
-    head: "Is Iraichi Kadai Mutton Keema free from antibiotics and hormones?",
-    para: `Our keema comes from goats raised without antibiotics or hormones, ensuring a clean and natural product you can trust.`,
+    head: "Do you use fresh and high-quality ingredients in your cakes?",
+    para: `Yes, we use farm-fresh eggs, pure dairy cream, high-quality cocoa, and natural flavors to maintain exceptional taste and quality.`,
   },
   {
-    head: "What nutritional benefits does Iraichi Kadai Mutton Keema offer?",
-    para: `A powerhouse of protein, iron, and essential vitamins, it supports a healthy and balanced diet.`,
+    head: "What nutritional value do your cakes offer?",
+    para: `Our cakes provide energy through balanced ingredients, and we also offer eggless and reduced-sugar options for mindful indulgence.`,
   },
   {
-    head: "What types of dishes can I prepare using Iraichi Kadai Mutton Keema?",
-    para: `Ideal for keema pav, mutton cutlets, curries, stuffed parathas, or savory pastry fillings.`,
+    head: "What types of cakes can I order from your shop?",
+    para: `We offer birthday cakes, wedding cakes, custom theme cakes, chocolate cakes, fruit cakes, cupcakes, and festive special desserts.`,
   },
   {
-    head: "Can Iraichi Kadai Mutton Keema be used for both daily meals and festive cooking?",
-    para: `Whether for everyday meals or special occasions, its fresh taste adds depth to every recipe.`,
+    head: "Are your cakes suitable for special occasions?",
+    para: `Absolutely! From birthdays and anniversaries to weddings and corporate events, our cakes add sweetness to every celebration.`,
   },
   {
-    head: "How does Iraichi Kadai ensure ethical and sustainable sourcing for its mutton keema?",
-    para: `Our goats are nurtured with care in a sustainable manner, ensuring quality meat with no compromise on ethics.`,
+    head: "How do you ensure hygiene and freshness in your bakery?",
+    para: `We follow strict hygiene standards in our kitchen, bake in small batches, and ensure every cake is freshly prepared before delivery.`,
   },
+  {
+  head: "Do you offer custom-designed cakes for special themes?",
+  para: `Yes, we create fully customized cakes based on your theme, favorite flavors, colors, and design preferences to make your celebration unique and memorable.`,
+},
+{
+  head: "Can I choose different flavors and fillings for my cake?",
+  para: `Absolutely! From classic chocolate and vanilla to red velvet, butterscotch, and exotic fruit fillings, you can mix and match flavors to suit your taste.`,
+},
+{
+  head: "Do you provide home delivery and same-day cake orders?",
+  para: `We offer convenient home delivery services and same-day cake orders for selected designs, ensuring your celebrations are never delayed.`,
+},
 ];
 
 function PDPsec2({ images = [] }) {

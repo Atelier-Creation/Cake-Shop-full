@@ -223,7 +223,7 @@ function Login() {
       <div className="flex flex-col lg:flex-col items-center justify-center gap-3 my-10 lg:w-120 md:w-110 w-full lg:mx-auto md:mx-auto px-5">
         <h1 className="text-3xl font-bold mb-4">Login</h1>
 
-        {error && <p className="text-red-500">{error}</p>}
+        {error && <p className="text-[#2b0d05]">{error}</p>}
 
         <input
           type="text"
@@ -254,13 +254,13 @@ function Login() {
         </div>
 
         <div className="flex justify-between w-full mt-2">
-          <div className="text-start text-[#EE1c25] w-full">
+          <div className="text-start text-[#2b0d05] w-full">
             <a href="/forgot-password" className="border-b text-start">
               Forgot your password?
             </a>
           </div>
 
-          <div className="text-end text-[#EE1c25] w-full">
+          <div className="text-end text-[#2b0d05] w-full">
             <a href={createAccountHref} className="border-b text-end cursor-pointer">
               Create account
             </a>
@@ -271,7 +271,7 @@ function Login() {
           <button
             onClick={handleLogin}
             disabled={loading}
-            className="py-3 px-7 bg-[#EE1c25] text-white rounded-md mt-3 cursor-pointer disabled:opacity-50"
+            className="py-3 px-7 bg-[#fdc700] text-[#2b0d05] font-semibold rounded-md mt-3 cursor-pointer disabled:opacity-50"
           >
             {loading ? "Signing in..." : "Sign in"}
           </button>

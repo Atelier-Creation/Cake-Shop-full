@@ -15,6 +15,7 @@ import { PhoneNumberField } from "./PhoneNumberField";
 
 // NEW: coupon API (added getAvailableCoupons)
 import { verifyCoupon, getAvailableCoupons } from "../../api/couponApi";
+import CakeNavbar from "./CakeNavbar";
 
 const indianStates = [
   "Andhra Pradesh",
@@ -1080,7 +1081,7 @@ function PaymentPage() {
         </div>
       )}
 
-      <Navbar />
+      <CakeNavbar />
       {/* Processing overlay (appears after successful payment until order work finishes) */}
       {processingPayment && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
@@ -1125,7 +1126,7 @@ function PaymentPage() {
             <h3 className="text-2xl font-bold">DELIVERY</h3>
             <label
               className={`flex items-center justify-between h-[52px] border rounded px-4 cursor-pointer ${deliveryOption === "ship"
-                  ? "border-blue-600 bg-blue-50"
+                  ? "border-[#EF4B5F] bg-red-50"
                   : "border-gray-300"
                 }`}
               onClick={() => setDeliveryOption("ship")}
@@ -1142,7 +1143,7 @@ function PaymentPage() {
 
             <label
               className={`flex items-center justify-between h-[52px] border rounded px-4 cursor-pointer ${deliveryOption === "COD"
-                  ? "border-blue-600 bg-blue-50"
+                  ? "border-[#EF4B5F] bg-red-50"
                   : "border-gray-300"
                 }`}
               onClick={() => setDeliveryOption("COD")}
@@ -1300,7 +1301,7 @@ function PaymentPage() {
           <div className="mt-8">
             <button
               type="button"
-              className="w-full bg-black text-white h-[52px] rounded cursor-pointer"
+              className="w-full bg-[#fdc700] text-[#2b0d05] font-semibold h-[52px] rounded cursor-pointer"
               onClick={handlePayment}
             >
               {paymentload
@@ -1331,7 +1332,7 @@ function PaymentPage() {
                 <button
                   onClick={handleApplyCoupon}
                   disabled={couponVerifying}
-                  className="bg-indigo-600 text-white px-3 rounded flex-none h-[44px] min-w-[64px]"
+                  className="bg-[#fdc700] text-[#2b0d05] font-semibold px-3 rounded flex-none h-[44px] min-w-[64px]"
                 >
                   {couponVerifying ? "Checking..." : "Apply"}
                 </button>

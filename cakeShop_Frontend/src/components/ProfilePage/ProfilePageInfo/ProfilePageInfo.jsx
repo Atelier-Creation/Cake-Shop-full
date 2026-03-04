@@ -308,7 +308,7 @@ function ProfilePageInfo() {
       </div>
       <div className="saved-address-heading">
         <h2>Saved Addresses</h2>
-        <p
+        {/* <p
           className="profile-page-view-all-text-p"
           style={{ cursor: "pointer" }}
           onClick={() =>
@@ -316,7 +316,7 @@ function ProfilePageInfo() {
           }
         >
           VIEW ALL
-        </p>
+        </p> */}
       </div>
       <div className="user-address-con">
         {Array.isArray(addresses) && addresses.length > 0 ? (
