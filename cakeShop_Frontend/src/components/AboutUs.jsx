@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function AboutUs() {
-  const videoId = "HTXB6flODww";
+  const videoId = "54eHmcri6b4";
 
   return (
     <section id="about" className="w-full bg-[#5b2c26] py-10 md:py-6 my-10">

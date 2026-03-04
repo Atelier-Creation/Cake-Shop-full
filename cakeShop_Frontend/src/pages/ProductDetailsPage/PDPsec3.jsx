@@ -50,7 +50,7 @@ const PDPsec3 = ({
           <div className="hidden lg:block mt-6 text-center">
             <button
               onClick={onViewAll}
-              className="bg-[#EF4B5F] text-white px-6 py-2 rounded-md font-medium"
+              className="bg-[#fdc700] text-[#2a0e05] px-6 py-2 rounded-md font-medium"
             >
               View all
             </button>

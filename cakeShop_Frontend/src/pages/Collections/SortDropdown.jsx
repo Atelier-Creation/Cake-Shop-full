@@ -36,7 +36,7 @@ const SortDropdown = ({ onSortChange }) => {
       {/* Trigger Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex justify-between items-center border border-red-800 rounded px-3 py-2 text-gray-700"
+        className="w-full flex justify-between items-center border border-[#2a0e05] rounded px-3 py-2 text-gray-700"
       >
         <span>{selected}</span>
         <ChevronDown
@@ -49,13 +49,13 @@ const SortDropdown = ({ onSortChange }) => {
 
       {/* Dropdown Menu */}
       {open && (
-        <ul className="absolute mt-1 w-full bg-[#fdd9cc] border rounded shadow-md z-50">
+        <ul className="absolute mt-1 w-full bg-[#fff9ef] border rounded shadow-md z-50">
           {options.map((option) => (
             <li
               key={option}
               onClick={() => handleSelect(option)}
-              className={`px-3 py-2 cursor-pointer hover:bg-gray-100 ${
-                selected === option ? "bg-gray-50 font-medium" : ""
+              className={`px-3 py-2 cursor-pointer hover:bg-[#fff9ef] ${
+                selected === option ? "bg-[#2a0e05] text-[#fdc700] font-medium" : ""
               }`}
             >
               {option}

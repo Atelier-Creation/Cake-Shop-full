@@ -189,7 +189,7 @@ const Collectiongrid = () => {
         <div className="hidden md:flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-3">
           <p className="text-sm text-gray-500">{displayProducts.length} products</p>
           <div className="flex items-center gap-2 text-sm">
-            <span className="text-gray-700">Sort by:</span>
+            <div className="text-gray-700">Sort by:</div>
             <SortDropdown onSortChange={handleSortChange} />
           </div>
         </div>

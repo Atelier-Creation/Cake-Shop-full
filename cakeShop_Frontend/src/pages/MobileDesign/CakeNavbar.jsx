@@ -99,14 +99,37 @@ const CakeNavbar = () => {
     return (
         <div>
             {topNav && (
-                <div className="relative flex justify-center py-2 items-center bg-[#2b0d05]">
-                    <LocationDropdown />
-                    <div onClick={() => setTopNav(false)} className="absolute md:right-1/4 right-2 cursor-pointer ">
+                <div className="relative flex flex-col md:flex-row justify-center items-center py-2 bg-[#2b0d05] text-white text-sm overflow-hidden">
+
+                    {/* Location - Desktop Only */}
+                    <div className="absolute left-10 hidden lg:flex items-center gap-2">
+                        <LocationDropdown />
+                    </div>
+
+                    {/* Desktop Static Offer */}
+                    <div className="hidden lg:flex items-center gap-2 text-[#fdc700] font-medium">
+                        Use Code <span className="text-white">SWEET10</span> & Get 10% OFF on Orders Above <span className="text-white">₹499!</span>
+                    </div>
+
+                    {/* Mobile / Tablet Running Flash News */}
+                    <div className="lg:hidden w-full overflow-hidden">
+                        <div className="whitespace-nowrap animate-marquee text-[#fdc700] font-medium">
+                            Use Code SWEET10 & Get 10% OFF on Orders Above ₹499! &nbsp;&nbsp;&nbsp;
+                            Free Delivery on Orders Above ₹699 &nbsp;&nbsp;&nbsp;
+                            Flat ₹100 OFF on First Order – Code FIRST100 &nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+
+                    {/* Close Button */}
+                    <div
+                        onClick={() => setTopNav(false)}
+                        className="absolute right-2 md:right-10 cursor-pointer"
+                    >
                         <X size={20} color="#fdc700" />
                     </div>
+
                 </div>
-            )
-            }
+            )}
             <nav className="w-full bg-[#fff9ef] py-2.5 relative">
                 <div className="mx-auto flex items-center justify-between px-4">
 
@@ -145,7 +168,7 @@ const CakeNavbar = () => {
                                 onClick={handleAccountClick}
                                 className="bg-[#2b0d05] text-white h-8 w-8 flex justify-center items-center rounded-full cursor-pointer"
                             >
-                                    <Search size={18} />
+                                <Search size={18} />
                             </div>
                             {/* Account */}
                             <div

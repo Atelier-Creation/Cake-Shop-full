@@ -59,7 +59,7 @@
 
 .profile-page-sidebar-icon-text {
   display: flex;
-  background-color: rgb(242, 241, 241);
+  background-color: #fff9ef;
   flex-direction: row;
   cursor: pointer;
   gap: 10px;
@@ -68,19 +68,20 @@
 }
 
 .profile-page-sidebar-icon-text:hover {
-  background-color: #ffffff;
+  background-color: #2a0e05;
   padding: 20px;
   border-radius: 0px;
+  color: #fdc700;
 }
 
 .profile-page-sidebar-icon-text.active {
-  background-color:#EF4B5F;
-  color: white;
+  background-color:#2a0e05;
+  color: #fdc700;
   border-radius: 0px;
 }
 
 .profile-page-sidebar-icon-text.active h5 {
-color: white !important;
+color: #fdc700 !important;
 }
 .profile-page-sidebar-icon-text h5 {
   font-size: 18px;

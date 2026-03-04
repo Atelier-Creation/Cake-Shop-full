@@ -132,7 +132,7 @@ function ProfilePageSidebar({ setActiveSection, activeSection }) {
 
       {/* Desktop sidebar */}
       <div className="desktop-sidebar">
-        <div className="profile-page-sidebar-individual-sec">
+        <div className="profile-page-sidebar-individual-sec ">
           <div
             className={isActive("personal")}
             onClick={() => {

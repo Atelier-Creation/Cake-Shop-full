@@ -307,7 +307,7 @@ function PDPsec1() {
                 src={img}
                 alt={`thumb-${idx}`}
                 onClick={() => setMainImage(img)}
-                className={`lg:w-32 lg:h-32 w-20 h-20 aspect-square object-cover lg:rounded-3xl rounded border-2 cursor-pointer transition-transform hover:scale-105 ${mainImage === img ? "border-red-500" : "border-gray-300"
+                className={`lg:w-32 lg:h-32 w-20 h-20 aspect-square object-cover lg:rounded-3xl rounded border-2 cursor-pointer transition-transform hover:scale-105 ${mainImage === img ? "border-[#fdc700]" : "border-gray-300"
                   }`}
               />
             ))}
@@ -338,7 +338,7 @@ function PDPsec1() {
                   product?.weightOptions?.[0]?.discountPrice?.toFixed(2) ??
                   ""}
               </p>
-              <button className="bg-[#EF4B5F] text-white text-base px-5 py-0.5 rounded-md">
+              <button className="bg-[#fdc700] text-[#2a0e05] text-base px-5 py-0.5 rounded-md">
                 sale
               </button>
             </div>
@@ -357,7 +357,7 @@ function PDPsec1() {
                         className={`lg:px-5 lg:py-2 px-3 py-2 rounded-md cursor-pointer text-base border transition duration-300 ${isOutOfStock
                             ? "bg-gray-200 text-gray-500 border-gray-300 cursor-not-allowed"
                             : selected?._id === opt._id
-                              ? "bg-[#EF4B5F] text-white border-[#EF4B5F]"
+                              ? "bg-[#fdc700] text-[#2a0e05] border-[#fdc700]"
                               : "bg-transparent text-black border-gray-400"
                           }`}
                       >
@@ -439,14 +439,14 @@ function PDPsec1() {
 
             <div className="flex flex-col gap-3 lg:pr-10">
               <button
-                className="border py-3 rounded-2xl border-[#EF4B5F]"
+                className="border py-3 rounded-2xl border-[#fdc700]"
                 onClick={handleAddToCart}
               >
                 Add to cart
               </button>
               <button
                 onClick={handleBuyNow}
-                className="border py-3 rounded-2xl border-[#EF4B5F] bg-[#EF4B5F] text-white"
+                className="border py-3 rounded-2xl bg-[#fdc700] text-[#2a0e05] border-[#fdc700]"
               >
                 Buy it now
               </button>

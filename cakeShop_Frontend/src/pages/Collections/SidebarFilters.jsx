@@ -86,7 +86,7 @@ const SidebarFilters = ({
                 type="checkbox"
                 checked={selectedValues.includes(opt.value)}
                 onChange={() => handleCheckboxChange(opt.value)}
-                className="w-4 h-4 accent-red-800"
+                className="w-4 h-4 accent-[#2a0e05]"
               />
               {opt.label}
             </label>
