@@ -5,25 +5,25 @@ const ContactSection = () => {
         {
             icon: "https://cdn.prod.website-files.com/68c2913cdc349585e89642ac/68ca4762e86df8637070b06e_phone.svg",
             label: "Contact us at",
-            value: "+0123-456-9870",
-            href: "tel:+01234569870",
+            value: "+91 9876543210",
+            href: "tel:+91 9876543210",
         },
         {
             icon: "https://cdn.prod.website-files.com/68c2913cdc349585e89642ac/68ca47626bf91c58761ece3d_handshake.svg",
             label: "Retail partnerships?",
-            value: "info@example.com",
-            href: "mailto:info@example.com",
+            value: "cakeshop@gmail.com",
+            href: "mailto:cakeshop@gmail.com",
         },
         {
             icon: "https://cdn.prod.website-files.com/68c2913cdc349585e89642ac/68ca4762322d7d886c667ff3_chat.svg",
             label: "Have questions?",
-            value: "info@example.com",
-            href: "mailto:info@example.com",
+            value: "cakeshop.com",
+            href: "mailto:cakeshop.com",
         },
     ];
 
     return (
-        <div className="w-full p-4 md:p-8">
+        <div className="w-full p-5 lg:p-8">
             {/* Main Container */}
             <div className="lg:max-w-[90%] mx-auto bg-[#f4ebe2] rounded-[40px] p-5 md:p-10 flex flex-col lg:flex-row items-center justify-between gap-12">
 

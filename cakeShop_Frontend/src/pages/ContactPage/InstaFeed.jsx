@@ -30,7 +30,7 @@ const InstaFeed = () => {
                                         href="https://instagram.com"
                                         className="text-yellow-500 font-bold border-b border-[#D4A373] hover:text-white transition-colors"
                                     >
-                                        @Bisqueria
+                                        @CakeShop
                                     </a>
                                 </div>
                             );
@@ -52,7 +52,7 @@ const InstaFeed = () => {
                                         href="https://instagram.com"
                                         className="text-yellow-500 font-bold border-b border-[#D4A373]"
                                     >
-                                        @Bisqueria
+                                        @CakeShop
                                     </a>
                                 </div>
                             );
@@ -75,7 +75,7 @@ const InstaFeed = () => {
                                     <div className="rounded-full mb-2">
                                         <Instagram className="w-8 h-8 text-white" />
                                     </div>
-                                    <span className="text-yellow-500 border-b-2 border-yellow-500 text-lg font-semibold">@Bisqueria</span>
+                                    <span className="text-yellow-500 border-b-2 border-yellow-500 text-lg font-semibold">@CakeShop</span>
                                 </div>
                             </div>
                         );

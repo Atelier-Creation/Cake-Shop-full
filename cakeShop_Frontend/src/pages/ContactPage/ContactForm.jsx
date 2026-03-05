@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactForm = () => {
     return (
-        <div className="flex flex-col lg:flex-row w-full max-w-[90%] mx-auto gap-6 pb-10 lg:px-8 font-sans">
+        <div className="flex flex-col lg:flex-row w-full lg:max-w-[90%] mx-auto gap-6 pb-10 lg:px-8 px-5 font-sans">
 
             {/* Left Section: Image Banner */}
             <div className="relative lg:w-1/2 rounded-[40px] overflow-hidden lg:min-h-[500px] flex items-end p-8 lg:p-12">

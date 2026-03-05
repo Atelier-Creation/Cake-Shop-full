@@ -12,8 +12,8 @@ const ContactHero = () => {
     return (
         <div>
             <CakeNavbar />
-            <section className="py-12 px-5 md:px-5 bg-white">
-                <div className="mx-auto">
+            <section className="py-12 px-5 lg:px-8 bg-white ">
+                <div className="lg:max-w-[90%] mx-auto">
                     {/* Header Grid Section */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-5">
                         <div>

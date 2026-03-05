@@ -43,12 +43,12 @@ const MobileFooter = () => {
           <div>
             <h3 className="text-xl font-semibold mb-6">Contact us</h3>
 
-            <p className="text-[#6b6b6b] mb-3 font-medium text-lg">info@example.com</p>
+            <p className="text-[#6b6b6b] mb-3 font-medium text-lg">cakeshop@gmail.com</p>
 
-            <p className="text-3xl font-bold mb-3">+0123-456-9870</p>
+            <p className="text-3xl font-bold mb-3">+91 9876543210</p>
 
             <p className="text-[#6b6b6b] mb-4 font-medium text-base">
-              27th Street, 15th Floor, New York, NY 1010
+              27th Street, coimbatore
             </p>
 
             <a
@@ -94,12 +94,12 @@ const MobileFooter = () => {
             </div>
 
             <p className="text-[#5a5a5a] text-base">
-              © 2025 Bisqueria made by Atelier Creation
+              © 2025 Cake Shop made by Atelier Creation
             </p>
           </div>
 
           {/* Big Right Text */}
-          <div className="md:text-[130px] text-5xl mx-auto lg:mx-0 font-extrabold leading-none">
+          <div className="md:text-[130px] text-5xl mx-auto lg:mx-0 font-extrabold leading-none uppercase">
             Cake Shop
           </div>
         </div>
