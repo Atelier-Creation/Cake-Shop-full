@@ -28,6 +28,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsContion from "./components/Terms-Contion";
 import usePushNotifications from "./hooks/usePushNotifications";
 import usePWAInstallPrompt from "./hooks/usePWAInstallPrompt";
+import ContactHero from "./pages/ContactPage/ContactHero";
 function App() {
   const { isInstallable, installApp } = usePWAInstallPrompt();
   usePushNotifications();
@@ -113,6 +114,7 @@ function App() {
               <Route path="/view-cart" element={<ShoppingCart />}></Route>
               <Route path="/profile" element={<ProfilePage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/contact" element={<ContactHero />} />
             </Routes>
           </ModalQuickProvider>
         </ModalProvider>

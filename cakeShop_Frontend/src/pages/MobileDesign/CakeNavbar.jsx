@@ -157,7 +157,7 @@ const CakeNavbar = () => {
                         <a href="/#about" className="text-[#2b0d05] font-medium">
                             About us
                         </a>
-                        <a href="/#contact" className="text-[#2b0d05] font-medium">
+                        <a href="/contact" className="text-[#2b0d05] font-medium">
                             Contact us
                         </a>
 
@@ -199,9 +199,7 @@ const CakeNavbar = () => {
 
                     {/* Mobile */}
                     <div className="lg:hidden flex items-center gap-3">
-                        <button onClick={() => setIsOpen(!isOpen)}>
-                            {isOpen ? <X size={26} /> : <Menu size={26} />}
-                        </button>
+
 
                         {/* Account */}
                         <div
@@ -227,6 +225,10 @@ const CakeNavbar = () => {
                                 </span>
                             )}
                         </div>
+
+                        <button onClick={() => setIsOpen(!isOpen)}>
+                            {isOpen ? <X size={26} /> : <Menu size={26} />}
+                        </button>
                     </div>
                 </div>
 

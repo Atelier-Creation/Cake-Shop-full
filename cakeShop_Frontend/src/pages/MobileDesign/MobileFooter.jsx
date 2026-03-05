@@ -66,7 +66,7 @@ const MobileFooter = () => {
               <ul className="space-y-3 text-[#5a5a5a] font-medium text-base">
                 <li><a href="/">Home</a></li>
                 <li><a href="/#about">About</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/contact">Contact</a></li>
               </ul>
             </div>
 
