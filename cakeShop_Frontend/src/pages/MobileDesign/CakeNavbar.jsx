@@ -239,7 +239,7 @@ const CakeNavbar = () => {
                             <a href="/" onClick={() => setIsOpen(false)}>Home</a>
                             <a href="/collections/all" onClick={() => setIsOpen(false)}>Product</a>
                             <a href="/#about" onClick={() => setIsOpen(false)}>About us</a>
-                            <a href="/#contact" onClick={() => setIsOpen(false)}>Contact us</a>
+                            <a href="/contact" onClick={() => setIsOpen(false)}>Contact us</a>
                         </div>
                     </div>
                 )}

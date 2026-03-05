@@ -120,7 +120,7 @@ function App() {
         </ModalProvider>
       </CartProvider>
       <WhatsAppFloatButton />
-      <div
+      {/* <div
         id="pwa-install-popup"
         className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white shadow-xl p-4 rounded-2xl border border-gray-300 w-[90%] max-w-[380px] z-50 hidden"
       >
@@ -151,7 +151,7 @@ function App() {
         >
           Maybe Later
         </button>
-      </div>
+      </div> */}
     </Router>
   );
 }
