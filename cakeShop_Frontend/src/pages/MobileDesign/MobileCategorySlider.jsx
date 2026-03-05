@@ -70,7 +70,7 @@ const MobileCategorySlider = () => {
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}
-          slidesPerView={1.5}
+          slidesPerView={1}
           breakpoints={{
             480: { slidesPerView: 2.2 },
             768: { slidesPerView: 3.2 },
