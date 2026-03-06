@@ -191,7 +191,7 @@ export default function Sidebar({ setSidebarOpen }) {
         </NavLink>
 
         {/* Marketing */}
-        <NavLink
+        {/* <NavLink
           to="/marketing"
           onClick={handleNavClick}
           className={({ isActive }) =>
@@ -205,7 +205,7 @@ export default function Sidebar({ setSidebarOpen }) {
         >
           <Star />
           {!collapsed && <span>Marketing</span>}
-        </NavLink>
+        </NavLink> */}
       </nav>
     </aside>
   );

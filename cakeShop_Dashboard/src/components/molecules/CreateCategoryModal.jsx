@@ -4,9 +4,9 @@ import { uploadToCloudinary } from "../../api/imageUpload";
 export default function CreateCategoryModal({ open, onClose, onCreate }) {
   const [formData, setFormData] = useState({
     name: "",
-        tamilName: "",
+    // tamilName: "",
     description: "",
-    tamilDescription: "",
+    // tamilDescription: "",
     image: "",
   });
 
@@ -40,31 +40,31 @@ export default function CreateCategoryModal({ open, onClose, onCreate }) {
 
   // Submit full category with subcategories
   const handleSubmit = async () => {
-    if (!formData.name.trim() || !formData.tamilName.trim()) {
-      alert("Both English and Tamil category names are required");
+    if (!formData.name.trim()) {
+      alert("Category names are required");
       return;
     }
-  
+
     setLoading(true);
-  
+
     try {
       let imageUrl = formData.image;
-  
+
       if (selectedFile) {
         imageUrl = await uploadToCloudinary(selectedFile);
       }
-  
+
       await onCreate({
         ...formData,
         image: imageUrl,
       });
-  
+
       // reset form
       setFormData({
         name: "",
-        tamilName: "",
+        // tamilName: "",
         description: "",
-        tamilDescription: "",
+        // tamilDescription: "",
         image: "",
       });
       setSelectedFile(null);
@@ -77,7 +77,7 @@ export default function CreateCategoryModal({ open, onClose, onCreate }) {
       setLoading(false);
     }
   };
-  
+
 
   if (!open) return null;
 
@@ -95,15 +95,15 @@ export default function CreateCategoryModal({ open, onClose, onCreate }) {
           placeholder="Category Name"
           className="w-full p-2 mb-3 border rounded"
         />
-                {/* Tamil Name */}
-                <input
+        {/* Tamil Name */}
+        {/* <input
           type="text"
           name="tamilName"
           value={formData.tamilName}
           onChange={handleChange}
           placeholder="Category Name (Tamil)"
           className="w-full p-2 mb-3 border rounded"
-        />
+        /> */}
         <textarea
           name="description"
           value={formData.description}
@@ -112,14 +112,14 @@ export default function CreateCategoryModal({ open, onClose, onCreate }) {
           className="w-full p-2 mb-3 border rounded"
         />
 
-                        {/* Tamil Description */}
-                        <textarea
+        {/* Tamil Description */}
+        {/* <textarea
           name="tamilDescription"
           value={formData.tamilDescription}
           onChange={handleChange}
           placeholder="Description (Tamil)"
           className="w-full p-2 mb-3 border rounded"
-        />
+        /> */}
 
         {/* Category Image */}
         <div

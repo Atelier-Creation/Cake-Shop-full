@@ -321,18 +321,18 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="bg-[#F3F6FF] p-4 sm:p-6 lg:p-8 flex items-center justify-center font-inter min-h-screen">
+    <div className="bg-[#fff9ef] p-4 sm:p-6 lg:p-8 flex items-center justify-center font-inter min-h-screen">
       <div className="w-full max-w-4xl bg-white rounded-xl shadow-lg p-6 sm:p-8 lg:p-10">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 text-center">My Profile</h1>
 
-        <section className="mb-10 p-6 bg-[#F3F6FF] rounded-lg border border-gray-200">
+        <section className="mb-10 p-6 bg-[#f4ebe2] rounded-lg border border-gray-200">
           <div className="flex justify-between items-center mb-6 border-b pb-3">
             <h2 className="text-2xl font-semibold text-gray-800 flex items-center gap-2">
               <User className="text-blue-600" /> Profile Information
             </h2>
             <button
               onClick={() => setShowEditProfileModal(true)}
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition"
+              className="inline-flex items-center px-4 py-2 bg-[#280a03] text-[#ffcc0f] text-sm font-medium rounded-md hover:bg-[#ffcc0f] hover:text-[#280a03] transition"
             >
               <Edit size={16} className="mr-2" /> Edit Profile
             </button>
@@ -442,7 +442,7 @@ const ProfilePage = () => {
 
           <div className="flex justify-end gap-3 pt-4">
             <button type="button" onClick={handleCloseEditProfileModal} className="inline-flex justify-center py-2 px-6 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-[#F3F6FF]">Cancel</button>
-            <button type="submit" className="inline-flex justify-center py-2 px-6 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">Save Changes</button>
+            <button type="submit" className="inline-flex justify-center py-2 px-6 border border-transparent text-sm font-medium rounded-md  bg-[#280a03] text-[#ffcc0f] hover:bg-[#ffcc0f] hover:text-[#280a03] ">Save Changes</button>
           </div>
         </form>
       </Modal>
@@ -454,7 +454,7 @@ const ProfilePage = () => {
 
           <div className="flex justify-end gap-3 pt-2">
             <button type="button" onClick={() => { setShowAddressModal(false); setWorkingAddress({}); setEditingAddressIndex(null); }} className="inline-flex justify-center py-2 px-6 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-[#F3F6FF]">Cancel</button>
-            <button type="button" onClick={saveAddress} disabled={addressSaving} className="inline-flex justify-center py-2 px-6 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">{addressSaving ? 'Saving...' : (editingAddressIndex === null ? 'Add' : 'Save')}</button>
+            <button type="button" onClick={saveAddress} disabled={addressSaving} className="inline-flex justify-center py-2 px-6 border border-transparent text-sm font-medium rounded-md bg-[#280a03] text-[#ffcc0f] hover:bg-[#ffcc0f] hover:text-[#280a03] ">{addressSaving ? 'Saving...' : (editingAddressIndex === null ? 'Add' : 'Save')}</button>
           </div>
         </div>
       </Modal>
@@ -468,7 +468,7 @@ const ProfilePage = () => {
 
           <div className="flex justify-end gap-3 pt-4">
             <button type="button" onClick={handleCloseChangePasswordModal} className="inline-flex justify-center py-2 px-6 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-[#F3F6FF]">Cancel</button>
-            <button type="submit" disabled={changingPassword} className="inline-flex justify-center py-2 px-6 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed">{changingPassword ? 'Changing...' : 'Change Password'}</button>
+            <button type="submit" disabled={changingPassword} className="inline-flex justify-center py-2 px-6 border border-transparent text-sm font-medium rounded-md bg-[#280a03] text-[#ffcc0f] hover:bg-[#ffcc0f] hover:text-[#280a03]  disabled:opacity-50 disabled:cursor-not-allowed">{changingPassword ? 'Changing...' : 'Change Password'}</button>
           </div>
         </form>
       </Modal>

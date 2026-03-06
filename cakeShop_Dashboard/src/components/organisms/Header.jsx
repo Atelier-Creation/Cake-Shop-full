@@ -53,7 +53,7 @@ export default function Header({ sidebarOpen, setSidebarOpen }) {
         {/* Notification Button */}
         <button
           onClick={() => setactive_notif(!active_notif)}
-          className="bg-[#F3F6FF] relative w-11 h-11 rounded-tl-[10px] rounded-tr-[5px] rounded-br-[10px] rounded-bl-[5px] flex items-center justify-center"
+          className="bg-[#f4ebe2] relative w-11 h-11 rounded-tl-[10px] rounded-tr-[5px] rounded-br-[10px] rounded-bl-[5px] flex items-center justify-center"
           aria-pressed={active_notif}
         >
           <svg

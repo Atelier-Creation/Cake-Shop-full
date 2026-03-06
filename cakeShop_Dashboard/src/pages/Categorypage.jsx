@@ -227,7 +227,7 @@ export default function CategoryPage() {
               className="w-full p-2 mb-4 border rounded"
               placeholder="Category Name (English)"
             />
-            <input
+            {/* <input
               type="text"
               value={editingCategory.tamilName || ""}
               onChange={(e) =>
@@ -235,7 +235,7 @@ export default function CategoryPage() {
               }
               className="w-full p-2 mb-4 border rounded"
               placeholder="Category Name (Tamil)"
-            />
+            /> */}
             <textarea
               value={editingCategory.description}
               onChange={(e) =>
@@ -247,7 +247,7 @@ export default function CategoryPage() {
               className="w-full p-2 mb-4 border rounded"
               placeholder="Description (English)"
             />
-            <textarea
+            {/* <textarea
               value={editingCategory.tamilDescription || ""}
               onChange={(e) =>
                 setEditingCategory({
@@ -257,7 +257,7 @@ export default function CategoryPage() {
               }
               className="w-full p-2 mb-4 border rounded"
               placeholder="Description (Tamil)"
-            />
+            /> */}
 
             <div className="flex justify-end gap-2 items-center">
               {editError && <span className="text-red-600 mr-auto">{editError}</span>}
