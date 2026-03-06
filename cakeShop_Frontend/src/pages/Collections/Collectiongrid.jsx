@@ -165,7 +165,7 @@ const Collectiongrid = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 px-4 md:px-8 py-16 bg-white">
+    <div className="flex flex-col md:flex-row gap-6 px-4 md:px-8 py-10 lg:py-16 bg-white">
       {/* Sidebar */}
       <aside className="hidden md:block w-full md:w-1/4 lg:w-1/5">
         <SidebarFilters
@@ -195,7 +195,7 @@ const Collectiongrid = () => {
         </div>
 
         {/* Product Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {loading
             ? Array.from({ length: ITEMS_PER_PAGE }).map((_, idx) => (
                 <div

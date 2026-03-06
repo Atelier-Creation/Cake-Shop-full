@@ -1097,7 +1097,7 @@ function PaymentPage() {
         </div>
       )}
 
-      <div className="flex gap-12 justify-center mt-20 mb-52 px-4 flex-col-reverse lg:flex-row">
+      <div className="flex gap-12 justify-center lg:mt-20 my-10 lg:mb-52 px-4 flex-col-reverse lg:flex-row">
         <div className="lg:w-1/2 w-full space-y-8">
           {/* CONTACT */}
           <div className="space-y-4">

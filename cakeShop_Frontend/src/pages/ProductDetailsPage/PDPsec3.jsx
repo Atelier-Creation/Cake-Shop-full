@@ -49,7 +49,7 @@ const PDPsec3 = ({
         {onViewAll && (
           <div className="hidden lg:block mt-6 text-center">
             <button
-              onClick={onViewAll}
+              onClick={()=>navigate("/collections/All")}
               className="bg-[#fdc700] text-[#2a0e05] px-6 py-2 rounded-md font-medium"
             >
               View all
@@ -110,7 +110,7 @@ const PDPsec3 = ({
       {onViewAll && (
         <div className="mt-6 text-center lg:hidden">
           <button
-            onClick={onViewAll}
+            onClick={()=>navigate("/collections/All")}
             className="bg-red-800 text-white px-6 py-2 rounded-md font-medium"
           >
             View all

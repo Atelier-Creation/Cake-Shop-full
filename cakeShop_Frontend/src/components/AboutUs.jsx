@@ -13,7 +13,7 @@ export default function AboutUs() {
 
             {/* LEFT SIDE – VIDEO (Same Video) */}
 
-              <div className="w-full lg:w-full h-[40vh] md:h-[60vh] lg:h-[70vh] relative shadow-xl aspect-square overflow-hidden rounded-lg pointer-events-none">
+              <div className="w-full lg:w-full h-[30vh] md:h-[60vh] lg:h-[70vh] relative shadow-xl aspect-square overflow-hidden rounded-lg pointer-events-none">
                 <iframe
                   className="w-[300%] h-[100%] -ml-[100%] object-cover"
                   src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&modestbranding=1&rel=0`}

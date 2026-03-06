@@ -87,7 +87,7 @@ const BakerySlider = () => {
                                     <img
                                         src={item.image}
                                         alt={item.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                        className="w-full lg:h-full h-[30vh] md:h-[40vh] object-cover transition-transform duration-500 hover:scale-110"
                                     />
                                 </div>
                                 <div className="px-2 flex flex-col flex-grow">

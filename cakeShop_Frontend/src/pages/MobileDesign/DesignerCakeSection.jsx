@@ -13,7 +13,7 @@ const DesignerCakeSection = () => {
                     backgroundImage: "url('https://img.freepik.com/premium-vector/culinary-background-with-cupcakes-ice-cream-black-white_328432-1502.jpg?uid=R175611833&ga=GA1.1.1276842385.1760516584&semt=ais_hybrid&w=740&q=80')"
                 }}
             ></div>
-            <div className="w-full px-5 lg:px-16 py-12 lg:py-24 flex flex-col md:flex-row items-center justify-between gap-10 bg-white overflow-hidden">
+            <div className="w-full px-5 lg:px-16 py-5 lg:py-24 flex flex-col md:flex-row items-center justify-between md:gap-10 bg-white overflow-hidden">
                 {/* Left side Image */}
                 <div className="w-full md:w-1/2 flex justify-center relative" data-aos="fade-right">
                     {/* Placeholder image of a cake. Since a specific image wasn't provided for this section, I am using a placeholder that looks good, transparent */}
@@ -45,17 +45,17 @@ const DesignerCakeSection = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 mb-10">
-                        <div className="flex items-center gap-3 border-[1.5px] border-[#2a0e05] text-[#2a0e05] px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:bg-[#2a0e05] hover:text-[#fdc700] cursor-pointer">
+                        <div className="flex items-center gap-1 lg:gap-3 border-[1.5px] border-[#2a0e05] text-[#2a0e05] px-2 lg:px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:bg-[#2a0e05] hover:text-[#fdc700] cursor-pointer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line>
                             </svg>
                             Soft Baked Product
                         </div>
-                        <div className="flex items-center gap-3 border-[1.5px] border-[#2a0e05] text-[#2a0e05] px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:bg-[#2a0e05] hover:text-[#fdc700] cursor-pointer">
+                        <div className="flex items-center gap-1 lg:gap-3 border-[1.5px] border-[#2a0e05] text-[#2a0e05] px-2 lg:px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:bg-[#2a0e05] hover:text-[#fdc700] cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-indian-rupee-icon lucide-indian-rupee"><path d="M6 3h12" /><path d="M6 8h12" /><path d="m6 13 8.5 8" /><path d="M6 13h3" /><path d="M9 13c6.667 0 6.667-10 0-10" /></svg>
                             Fully Weat Product
                         </div>
-                        <div className="flex items-center gap-3 border-[1.5px] border-[#2a0e05] text-[#2a0e05] px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:bg-[#2a0e05] hover:text-[#fdc700] cursor-pointer">
+                        <div className="flex items-center gap-1 lg:gap-3 border-[1.5px] border-[#2a0e05] text-[#2a0e05] px-2 lg:px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:bg-[#2a0e05] hover:text-[#fdc700] cursor-pointer">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path>
                             </svg>

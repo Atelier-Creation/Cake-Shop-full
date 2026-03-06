@@ -48,7 +48,7 @@ const FeatureSlider = () => {
   ];
 
   return (
-    <div className="w-full px-4 py-12 bg-white">
+    <div className="w-full px-4 lg:py-12 bg-white">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={30}
@@ -65,7 +65,7 @@ const FeatureSlider = () => {
         {cakeFeatures.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="flex flex-col items-center text-center p-4"
+              className="flex flex-col items-center text-center lg:p-4"
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
@@ -85,12 +85,12 @@ const FeatureSlider = () => {
               </div>
 
               {/* Title - All Caps, Spaced */}
-              <h3 className="text-sm md:text-base font-bold tracking-[0.15em] text-gray-900 uppercase mb-3">
+              <h3 className="text-sm md:text-base font-bold  text-gray-900 uppercase mb-3">
                 {item.title}
               </h3>
 
               {/* Description - Italicized, Serif-style font */}
-              <p className="text-sm md:text-base italic text-gray-600 ">
+              <p className="text-sm md:text-base text-gray-600 ">
                 {item.desc}
               </p>
             </div>

@@ -49,7 +49,7 @@ const MobileBanner = () => {
   };
 
   return (
-    <div className="relative w-full h-[40vh] max-w-md mx-auto overflow-hidden lg:w-full lg:h-[90vh] lg:max-w-none">
+    <div className="relative w-full h-[40vh] mx-auto overflow-hidden lg:w-full lg:h-[90vh] lg:max-w-none">
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
