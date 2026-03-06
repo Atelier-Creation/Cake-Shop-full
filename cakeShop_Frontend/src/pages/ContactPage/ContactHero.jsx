@@ -12,10 +12,10 @@ const ContactHero = () => {
     return (
         <div>
             <CakeNavbar />
-            <section className="py-12 px-5 lg:px-8 bg-white ">
+            <section className="lg:py-12 py-5 px-5 lg:px-8 bg-white ">
                 <div className="lg:max-w-[90%] mx-auto">
                     {/* Header Grid Section */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-8 gap-3 items-center mb-5">
                         <div>
                             <h1 className="text-5xl md:text-6xl font-bold text-[#2d1606] tracking-tight">
                                 Contact us

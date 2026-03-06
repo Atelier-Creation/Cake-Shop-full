@@ -14,7 +14,7 @@ const InstaFeed = () => {
     ];
 
     return (
-        <section className="py-12 px-4 bg-white">
+        <section className="lg:py-12 pb-5 px-4 bg-white">
             <div className="mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
                     {images.map((item, index) => {

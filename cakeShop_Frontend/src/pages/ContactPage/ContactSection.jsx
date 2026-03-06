@@ -25,7 +25,7 @@ const ContactSection = () => {
     return (
         <div className="w-full p-5 lg:p-8">
             {/* Main Container */}
-            <div className="lg:max-w-[90%] mx-auto bg-[#f4ebe2] rounded-[40px] p-5 md:p-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="lg:max-w-[90%] mx-auto bg-[#f4ebe2] rounded-[40px] p-5 md:p-10 flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-12">
 
                 {/* Left Side: Text Content */}
                 <div className="lg:max-w-md">
@@ -38,11 +38,11 @@ const ContactSection = () => {
                 </div>
 
                 {/* Right Side: Contact Items */}
-                <div className="flex flex-col sm:flex-row w-full justify-between gap-5">
+                <div className="flex flex-col md:flex-row w-full justify-between gap-5">
                     {contactMethods.map((method, index) => (
-                        <div key={index} className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                        <div key={index} className="flex md:flex-col flex-row  items-center gap-4 md:items-start lg:text-center sm:text-left">
                             {/* Icon Box */}
-                            <div className="bg-[#fffbf6] rounded-2xl w-20 h-20 flex items-center justify-center mb-5 shadow-sm">
+                            <div className="bg-[#fffbf6] rounded-2xl w-20 h-20 flex items-center justify-center lg:mb-5 shadow-sm">
                                 <img
                                     src={method.icon}
                                     alt="icon"

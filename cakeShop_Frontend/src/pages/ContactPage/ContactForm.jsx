@@ -32,7 +32,7 @@ const ContactForm = () => {
                         className="inline-flex items-center gap-3 px-6 py-3 border border-yellow-500 rounded-full text-yellow-500 font-medium transition-all hover:bg-yellow-500 hover:text-black group"
                     >
                         <span className="w-2 h-2 bg-yellow-500 rounded-full group-hover:bg-black"></span>
-                        +0123-456-9870
+                        +91 9876543210
                     </a>
                 </div>
             </div>
