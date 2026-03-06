@@ -100,7 +100,7 @@ function App() {
               <Route path="/collections/All" element={<Collections />} />
               <Route path="/products/:id" element={<PDPsec1 />} />
               <Route path="/checkout" element={<PaymentPage />} />
-              <Route path="/terms-conditions" element={<TermsContion />} />
+              {/* <Route path="/terms-conditions" element={<TermsContion />} /> */}
               <Route
                 path="/order-confirmed"
                 element={<OrderConfirmed />}
@@ -113,7 +113,7 @@ function App() {
               </Route>
               <Route path="/view-cart" element={<ShoppingCart />}></Route>
               <Route path="/profile" element={<ProfilePage />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              {/* <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
               <Route path="/contact" element={<ContactHero />} />
             </Routes>
           </ModalQuickProvider>

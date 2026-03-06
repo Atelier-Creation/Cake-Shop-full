@@ -375,7 +375,7 @@ function PDPsec1() {
             {/* Render Type of Cut only when cutType exists */}
             {product?.cutType?.length > 0 && (
               <div className="flex flex-col gap-2 w-50">
-                <label className="font-medium text-gray-700">Type of Cut</label>
+                <label className="font-medium text-gray-700">Type of Cake</label>
                 <select
                   value={selectedDrop}
                   onChange={(e) => setSelectedDrop(e.target.value)}

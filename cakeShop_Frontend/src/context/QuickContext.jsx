@@ -329,10 +329,9 @@ export const QuickModal = ({ productId }) => {
       />
 
       <div className="flex flex-col gap-3">
-        <p className="text-xs">Iraichi Kadai</p>
+        <p className="text-xs">Cake Shop</p>
         <h1 className="text-xl font-bold">
           {product.name}{" "}
-          <span className="text-sm block mt-3">{product.tamilName}</span>
         </h1>
 
         <div className="flex flex-row gap-2 items-center">
@@ -377,7 +376,7 @@ export const QuickModal = ({ productId }) => {
 
         {product.cutType?.length > 0 && (
           <div className="flex flex-col gap-2 w-50">
-            <label className="font-medium text-gray-700">Type of Cut</label>
+            <label className="font-medium text-gray-700">Type of Cake</label>
             <select
               value={selectedDrop}
               onChange={(e) => setSelectedDrop(e.target.value)}

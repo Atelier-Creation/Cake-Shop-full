@@ -73,8 +73,8 @@ const MobileFooter = () => {
             <div>
               <h3 className="text-xl font-semibold mb-6">Our utilities</h3>
               <ul className="space-y-3 text-[#5a5a5a] font-medium text-base">
-                <li className="cursor-pointer" onClick={()=>navigate("/terms-conditions")}>Terms</li>
-                <li className="cursor-pointer" onClick={()=>navigate("/privacy-policy")}>Privacy Policy</li>
+                <li className="cursor-pointer" onClick={()=>navigate("/")}>Terms</li>
+                <li className="cursor-pointer" onClick={()=>navigate("/")}>Privacy Policy</li>
               </ul>
             </div>
           </div>
