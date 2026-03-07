@@ -154,7 +154,7 @@ const CakeNavbar = () => {
 
                     {/* Right Side (Desktop) */}
                     <div className="hidden lg:flex flex-1 justify-center items-center gap-12 relative">
-                        <a href="/#about" className="text-[#2b0d05] font-medium">
+                        <a href="/about" className="text-[#2b0d05] font-medium">
                             About us
                         </a>
                         <a href="/contact" className="text-[#2b0d05] font-medium">
@@ -238,7 +238,7 @@ const CakeNavbar = () => {
                         <div className="flex flex-col items-center gap-6 py-6">
                             <a href="/" onClick={() => setIsOpen(false)}>Home</a>
                             <a href="/collections/all" onClick={() => setIsOpen(false)}>Product</a>
-                            <a href="/#about" onClick={() => setIsOpen(false)}>About us</a>
+                            <a href="/about" onClick={() => setIsOpen(false)}>About us</a>
                             <a href="/contact" onClick={() => setIsOpen(false)}>Contact us</a>
                         </div>
                     </div>
