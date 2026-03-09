@@ -69,13 +69,13 @@ export default function AboutTestimonial() {
 
     return (
         <div className="bg-[#F9F9F9]">
-            <section className="lg:max-w-[90%] mx-auto px-6 py-10 lg:py-20 ">
-                <div className="flex items-center gap-3 mb-4 uppercase tracking-widest text-sm md:text-base font-semibold text-gray-500 border-b w-fit pb-2 border-gray-200">
+            <section className="lg:max-w-[90%] mx-auto px-4 py-10 lg:py-20 ">
+                <div data-aos="fade-down" className="flex items-center gap-3 mb-4 uppercase tracking-widest text-sm md:text-base font-semibold text-gray-500 border-b w-fit pb-2 border-gray-200">
                     <span className="w-2 h-2 rounded-full bg-[#fdc700]"></span>
                     Testimonials
                 </div>
                 {/* Header */}
-                <div className="flex justify-between md:mb-12 mb-5">
+                <div data-aos="fade-down" className="flex justify-between md:mb-12 mb-5">
                     <h2 className="md:text-5xl text-3xl">What Our Guests Say</h2>
 
                     <div className="hidden lg:flex gap-3">
@@ -90,7 +90,7 @@ export default function AboutTestimonial() {
                 </div>
 
                 {/* Cards */}
-                <div className="hidden lg:flex gap-6 h-[60vh]">
+                <div data-aos="fade-up" className="hidden lg:flex gap-6 h-[60vh]">
 
                     {visible.map((t, i) => {
 

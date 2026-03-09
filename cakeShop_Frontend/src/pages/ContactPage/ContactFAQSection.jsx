@@ -5,7 +5,7 @@ const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mb-4 bg-[#F5EDE4] rounded-2xl">
+    <div data-aos="fade-down" className="mb-4 bg-[#F5EDE4] rounded-2xl">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-6 rounded-2xl"
@@ -75,7 +75,7 @@ const ContactFAQSection = () => {
   ];
 
   return (
-    <section className="lg:pt-0 pb-10 pt-0 lg:px-8 px-5 mx-auto lg:max-w-[90%]">
+    <section data-aos="fade-down" className="lg:pt-0 pb-10 pt-0 lg:px-8 px-4 mx-auto lg:max-w-[90%]">
 
       {/* Header */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end lg:mb-16 mb-5 gap-8">

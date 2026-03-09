@@ -16,11 +16,12 @@ const InstaFeed = () => {
     return (
         <section className="lg:py-12 pb-5 px-4 bg-white">
             <div className="mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div data-aos="fade-down" className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
                     {images.map((item, index) => {
                         if (item === "center-card") {
                             return (
                                 <div
+                                
                                     key="cta"
                                     className="hidden lg:flex flex-col items-center justify-center bg-[#2A1208] text-white rounded-2xl aspect-square p-4 text-center"
                                 >

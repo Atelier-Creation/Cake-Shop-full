@@ -6,7 +6,7 @@ const AboutVideoSection = () => {
     const videoUrl = "https://www.youtube.com/embed/pLgPFfFdpDs?autoplay=1";
 
     return (
-        <section className="relative w-full h-[30vh] md:h-screen overflow-hidden bg-black flex flex-col justify-center items-center">
+        <section data-aos="fade-left" className="relative w-full h-[40vh] md:h-screen overflow-hidden bg-black flex flex-col justify-center items-center">
 
             {/* Background */}
             <div className="absolute inset-0">

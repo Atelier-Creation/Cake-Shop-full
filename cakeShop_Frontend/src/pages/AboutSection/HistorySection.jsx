@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 const HISTORY_DATA = [
     {
         id: "2005",
@@ -69,16 +70,16 @@ const HistorySection = () => {
     };
 
     return (
-        <section className="lg:py-20 px-6 md:px-12 bg-white">
+        <section className="lg:py-20 md:px-12 bg-white">
 
-            <div className="mx-auto">
+            <div data-aos="fade-down" className="mx-auto">
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+                <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
 
                     {/* LEFT SIDE */}
                     <div className="lg:sticky relative lg:top-24 self-start flex flex-col gap-5 lg:flex-row items-start justify-around">
 
-                        <div className="flex items-center gap-3 mt-10 uppercase tracking-widest text-base font-semibold text-gray-500 border-b lg:w-1/2 pb-2 border-gray-200">
+                        <div  className="flex items-center gap-3 mt-10 uppercase tracking-widest text-base font-semibold text-gray-500 border-b lg:w-1/2 pb-2 border-gray-200">
                             <span className="w-2 h-2 rounded-full bg-[#fdc700]"></span>
                             Our History
                         </div>
@@ -147,6 +148,65 @@ const HistorySection = () => {
 
                 </div>
 
+                {/* MOBILE SLIDER */}
+                <div data-aos="fade-down" className='px-4 lg:hidden'>
+                    <div className="flex items-center gap-3 mt-10 uppercase tracking-widest text-base font-semibold text-gray-500 border-b w-fit pb-2 border-gray-200">
+                        <span className="w-2 h-2 rounded-full bg-[#fdc700]"></span>
+                        Our History
+                    </div>
+                </div>
+                <div data-aos="fade-down">
+
+
+                    <div className="lg:hidden">
+                        <Swiper modules={[Autoplay]}
+                            loop={true}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            }}
+                            spaceBetween={20}
+
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1, // mobile
+                                },
+                                768: {
+                                    slidesPerView: 2, // tablet
+                                },
+                                1024: {
+                                    slidesPerView: 3, // desktop
+                                },
+                            }}
+                            className="h-full w-full" >
+                            {HISTORY_DATA.map((item) => (
+                                <SwiperSlide key={item.id} className='px-4 py-10'>
+                                    <div className='bg-white rounded-lg h-full shadow-md  overflow-hidden'>
+
+                                        <div className="overflow-hidden h-[30vh]">
+                                            <img
+                                                src={item.image}
+                                                alt={`History ${item.year}`}
+                                                className="w-full h-full rounded-lg object-cover"
+                                            />
+                                        </div>
+                                        <div className='p-4'>
+                                            {/* YEAR INSIDE CARD */}
+                                            <h2 className="text-4xl font-bold text-[#fdc700] mb-2">
+                                                {item.year}
+                                            </h2>
+
+                                            <p className="text-base text-gray-700 leading-relaxed">
+                                                {item.text}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+
+                </div>
             </div>
 
         </section>

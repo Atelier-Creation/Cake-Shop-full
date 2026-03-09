@@ -31,7 +31,7 @@ const faqData = [
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
-    <div className="mb-4 overflow-hidden rounded-2xl bg-white shadow-sm border border-gray-50">
+    <div data-aos="fade-down" className="mb-4 overflow-hidden rounded-2xl bg-white shadow-sm border border-gray-50">
       <button
         onClick={onClick}
         className="flex w-full items-center justify-between p-3 md:p-6 text-left transition-colors hover:bg-gray-50/50"
@@ -65,11 +65,11 @@ const AboutFaq = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="bg-[#F9F9F9] lg:py-10 px-4 md:px-6 mb-10">
+    <section className="bg-[#F9F9F9] lg:py-10 px-4 md:px-6 mb-10 overflow-hidden">
       <div className="mx-auto lg:max-w-[90%]">
         <div className="grid md:gap-12 gap-7 lg:grid-cols-[1fr_1.5fr]">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div data-aos="fade-right" className="space-y-6">
             <div className="flex items-center gap-3 mb-4 uppercase tracking-widest text-sm md:text-base font-semibold text-gray-500 border-b w-fit pb-2 border-gray-200">
                 <span className="w-2 h-2 rounded-full bg-[#fdc700]"></span>
                 Faq

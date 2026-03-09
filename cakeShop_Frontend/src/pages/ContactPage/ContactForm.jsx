@@ -2,10 +2,10 @@ import React from 'react';
 
 const ContactForm = () => {
     return (
-        <div className="flex flex-col lg:flex-row w-full lg:max-w-[90%] mx-auto gap-6 pb-10 lg:px-8 px-5 font-sans">
+        <div className="flex flex-col lg:flex-row w-full lg:max-w-[90%] mx-auto gap-6 pb-10 lg:px-8 px-4 overflow-hidden">
 
             {/* Left Section: Image Banner */}
-            <div className="relative lg:w-1/2 rounded-[40px] overflow-hidden lg:min-h-[500px] flex items-end p-8 lg:p-12">
+            <div data-aos="fade-right" className="relative lg:w-1/2 rounded-lg md:rounded-[40px] overflow-hidden lg:min-h-[500px] flex items-end p-8 lg:p-12">
                 {/* Background Image & Overlays */}
                 <div className="absolute inset-0">
                     <img
@@ -38,17 +38,19 @@ const ContactForm = () => {
             </div>
 
             {/* Right Section: Form */}
-            <div className="lg:w-3/4 bg-[#F5EDE4] rounded-[40px] p-5 lg:p-8">
-                <h3 className="text-3xl font-bold text-[#280A03] mb-8">How we can help you?</h3>
+            <div data-aos="fade-left" className="lg:w-3/4 bg-[#F5EDE4] rounded-lg md:rounded-[40px] p-5 lg:p-8">
+                <h3 data-aos="fade-down" className="text-3xl font-bold text-[#280A03] mb-8">How we can help you?</h3>
 
                 <form className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input
                             type="text"
                             placeholder="Your first name?"
+                            data-aos="fade-down"
                             className="w-full px-6 h-12 rounded-full border border-[#d2bcb6] bg-transparent focus:outline-none focus:ring-1 focus:ring-[#280a03] placeholder-[#280a03]"
                         />
                         <input
+                        data-aos="fade-down"
                             type="text"
                             placeholder="Your last name?"
                             className="w-full px-6 h-12 rounded-full border border-[#d2bcb6] bg-transparent focus:outline-none focus:ring-1 focus:ring-[#280a03] placeholder-[#280a03]"
@@ -57,11 +59,13 @@ const ContactForm = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <input
+                        data-aos="fade-down"
                             type="email"
                             placeholder="Enter your email address"
                             className="w-full px-6 h-12 rounded-full border border-[#d2bcb6] bg-transparent focus:outline-none focus:ring-1 focus:ring-[#280a03] placeholder-[#280a03]"
                         />
                         <input
+                        data-aos="fade-down"
                             type="tel"
                             placeholder="Enter your phone number"
                             className="w-full px-6 h-12 rounded-full border border-[#d2bcb6] bg-transparent focus:outline-none focus:ring-1 focus:ring-[#280a03] placeholder-[#280a03]"
@@ -70,11 +74,13 @@ const ContactForm = () => {
 
                     <input
                         type="text"
+                        data-aos="fade-down"
                         placeholder="Enter your subject"
                         className="w-full px-6 h-12 rounded-full border border-[#d2bcb6] bg-transparent focus:outline-none focus:ring-1 focus:ring-[#280a03] placeholder-[#280a03]"
                     />
 
                     <textarea
+                    data-aos="fade-down"
                         placeholder="Enter your message"
                         rows="5"
                         className="w-full px-6 py-4 rounded-[30px] border border-[#d2bcb6] bg-transparent focus:outline-none focus:ring-1 focus:ring-[#280a03] placeholder-[#280a03] resize-none"
@@ -82,17 +88,19 @@ const ContactForm = () => {
 
                     <div className="flex items-center gap-3 py-2">
                         <input
+                        data-aos="fade-down"
                             type="radio"
                             id="terms"
                             className="w-5 h-5 accent-yellow-500 border-gray-300 rounded cursor-pointer"
                         />
-                        <label htmlFor="terms" className="text-base text-gray-700 cursor-pointer font-semibold">
+                        <label data-aos="fade-down" htmlFor="terms" className="text-base text-gray-700 cursor-pointer font-semibold">
                             I agree with the terms & conditions
                         </label>
                     </div>
 
                     <button
                         type="submit"
+                        data-aos="fade-down"
                         className="flex items-center gap-3 px-5 py-4 bg-[#FFCC0F] hover:bg-[#e6b80d] text-[#280A03] font-bold rounded-full transition-colors"
                     >
                         <span className="w-2 h-2 bg-[#280A03] rounded-full"></span>

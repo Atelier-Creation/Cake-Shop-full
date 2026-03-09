@@ -21,17 +21,18 @@ const stats = [
 ];
 
     return (
-        <section className="bg-[#fff9ef] py-20">
+        <section className="bg-[#fff9ef] lg:py-20 py-10">
             <div className="max-w-[90%] mx-auto">
                 {/* Grid layout: 1 col on mobile, 2 on tablet, 4 on desktop */}
                 <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                     {stats.map((stat, index) => (
                         <div
                             key={index}
-                            className="flex flex-col space-y-4 items-center justify-center text-center"
+                            data-aos="fade-down"
+                            className="flex flex-col space-y-4"
                         >
                             {/* Stat Number */}
-                            <h2 className="text-[#2b0d05] text-2xl md:text-5xl">
+                            <h2 className="text-[#2b0d05] text-3xl md:text-5xl">
                                 {stat.value}
                             </h2>
 
