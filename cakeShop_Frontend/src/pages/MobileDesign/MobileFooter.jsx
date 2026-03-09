@@ -114,7 +114,7 @@ export default function MobileFooter() {
       <footer className="bg-[#e9dfd6] text-[#2b0d05]">
 
         {/* MAIN FOOTER */}
-        <div className="mx-auto px-6 md:px-10 lg:px-16 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="mx-auto px-6 md:px-10 lg:px-16 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-0">
 
           {/* LOGO AREA */}
           <div className="flex flex-col items-start">

@@ -1,49 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-
-const bakeryItems = [
-    {
-        id: 1,
-        title: "Oatmeal raisin cookies",
-        reviews: 146,
-        price: "3.84",
-        image: "https://cdn.prod.website-files.com/68c2b2281c379c252b014434/68d67ed24708b3054414f063_products-1.avif"
-    },
-    {
-        id: 2,
-        title: "Soft pretzels",
-        reviews: 235,
-        price: "4.92",
-        image: "https://cdn.prod.website-files.com/68c2b2281c379c252b014434/68d67f5c6342b6c7ed37d668_products-14.avif"
-    },
-    {
-        id: 3,
-        title: "Baguette soft breads",
-        reviews: 380,
-        price: "14.96",
-        image: "https://cdn.prod.website-files.com/68c2b2281c379c252b014434/68d67fe4ab262b4e4de1a29e_products-18.avif"
-    },
-    {
-        id: 4,
-        title: "Chocolate hazelnut cannoli",
-        reviews: 120,
-        price: "6.78",
-        image: "https://cdn.prod.website-files.com/68c2b2281c379c252b014434/68d680689c9187b6a5e053c9_products-10.avif"
-    },
-    {
-        id: 5,
-        title: "Almond croissant",
-        reviews: 436,
-        price: "7.54",
-        image: "https://cdn.prod.website-files.com/68c2b2281c379c252b014434/68d680bf793abc58efc73b0b_products-9.avif"
-    }
-];
+import { getProducts } from '../api/productApi';
+import { useNavigate } from 'react-router-dom';
 
 const BakerySlider = () => {
+    const navigate = useNavigate()
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetchProducts();
+    }, []);
+
+    const fetchProducts = async () => {
+        try {
+            const res = await getProducts();
+            const data = res.data
+            console.log(data)
+            setProducts(data);
+        } catch (error) {
+            console.error("Error fetching products", error);
+        }
+    };
     return (
         <section className="px-4">
             <div className="mx-auto">
@@ -65,7 +46,7 @@ const BakerySlider = () => {
                     modules={[Autoplay, Navigation]}
                     spaceBetween={24}
                     slidesPerView={1}
-                    autoplay={{ delay: 4000, disableOnInteraction: false }}
+                    autoplay={{ delay: 400000, disableOnInteraction: false }}
                     navigation={{
                         prevEl: '.swiper-prev-btn',
                         nextEl: '.swiper-next-btn',
@@ -77,46 +58,43 @@ const BakerySlider = () => {
                     }}
                     className="pb-8"
                 >
-                    {bakeryItems.map((item) => (
+                    {products.map((item) => (
                         <SwiperSlide key={item.id}>
                             <div className="rounded-2xl p-2.5 flex flex-col h-full 
   bg-gradient-to-b from-white to-[#f4ebe2] 
   hover:from-[#fff7ee] hover:to-[#f0e2d3] 
   transition-all duration-500">
-                                <div className="overflow-hidden rounded-[1.5rem] mb-6">
+                                <div onClick={()=>navigate(`/products/${item._id}`)} className="overflow-hidden rounded-[1.5rem] mb-6 cursor-pointer">
                                     <img
-                                        src={item.image}
+                                        src={item.images[0]}
                                         alt={item.title}
-                                        className="w-full lg:h-full h-[30vh] md:h-[40vh] object-cover transition-transform duration-500 hover:scale-110"
+                                        className="w-full lg:h-[45vh] h-[30vh] md:h-[40vh] object-cover transition-transform duration-500 hover:scale-110"
                                     />
                                 </div>
-                                <div className="px-2 flex flex-col flex-grow">
-                                    <h3 className="text-lg font-medium text-[#280a03] mb-2">
-                                        {item.title}
+                                <div className="px-2 flex flex-col gap-4 flex-grow">
+                                    <h3 className="text-lg font-medium text-[#280a03]">
+                                        {item.name}
                                     </h3>
-                                    <div className="flex items-center gap-1 mb-6">
-                                        <div className="flex text-orange-400">
-                                            {[...Array(5)].map((_, i) => (
-                                                <svg key={i} className="w-6 h-6 fill-current" viewBox="0 0 20 20">
-                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                                </svg>
-                                            ))}
-                                        </div>
-                                        <span className="text-base text-gray-500">{item.reviews} reviews</span>
-                                    </div>
+                                    <p className='text-gray-700 text-base font-medium'>
+                                        category : {item.category.name}
+                                    </p>
+                                    <p className='text-gray-700 text-base font-medium '>
+                                        Type : {item.cutType.join(" / ")}
+                                    </p>
+
                                     <div className="mt-auto">
-                                        <button className="bg-white relative overflow-hidden group w-full rounded-full py-3 px-6 flex justify-between items-center">
+                                        <button onClick={()=>navigate(`/products/${item._id}`)} className="bg-white relative overflow-hidden group w-full rounded-full py-3 px-6 flex justify-between items-center">
                                             <span className="absolute inset-0 bg-[#280a03] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
                                             <div className="relative z-10 flex items-center gap-3">
                                                 <span className="w-1.5 h-1.5 bg-[#280a03] rounded-full group-hover:bg-yellow-400 transition-colors duration-300"></span>
 
                                                 <span className="font-medium text-[#280a03] text-base group-hover:text-yellow-400 transition-colors duration-300">
-                                                    Order now
+                                                    View
                                                 </span>
                                             </div>
 
                                             <span className="relative z-10 text-gray-700 text-sm font-medium group-hover:text-white transition-colors duration-300">
-                                                ₹ {item.price}
+                                                ₹ {item.weightOptions?.[0]?.discountPrice || item.weightOptions?.[0]?.price}
                                             </span>
 
                                         </button>

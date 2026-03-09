@@ -111,7 +111,7 @@ const PDPsec3 = ({
         <div className="mt-6 text-center lg:hidden">
           <button
             onClick={()=>navigate("/collections/All")}
-            className="bg-red-800 text-white px-6 py-2 rounded-md font-medium"
+            className="bg-[#fdc700] text-[#2a0e05] px-6 py-2 rounded-md font-medium"
           >
             View all
           </button>
